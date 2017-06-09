@@ -110,6 +110,9 @@ body {
         display: inline-block;
         line-height: 5rem;
         margin-left: $spacing-unit / 2;
+        font-size: $base-font-size * .75;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
 
         a {
           color: $color-background;
