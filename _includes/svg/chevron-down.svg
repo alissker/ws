@@ -1,0 +1,9 @@
+<svg viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd">
+    <title>Descer</title>
+    <defs></defs>
+    <g stroke="none" stroke-width="1">
+        <g id="chevron-down" fill-rule="nonzero">
+            <polygon points="5 11 0 6 1.5 4.5 5 8.25 8.5 4.5 10 6"></polygon>
+        </g>
+    </g>
+</svg>

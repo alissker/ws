@@ -2,6 +2,32 @@ html {
   font-size: 62.5%; // Makes 1rem = 10px.
 }
 
+body {
+  background: $color-background;
+  border-left: $spacing-unit / 4 solid $color-text;
+  border-right: $spacing-unit / 4 solid $color-text;
+  position: relative;
+
+  &:before,
+  &:after {
+    display: block;
+    position: fixed;
+    content: ' ';
+    width: 100%;
+    height: $spacing-unit / 4;
+    background-color: $color-text;
+    z-index: 9999;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+}
+
 .site-container {
   width: 100%;
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -17,10 +43,6 @@ html {
   }
 }
 
-body {
-  border-top: .3rem solid $color-accent;
-}
-
 /*
     Site Header
 */
@@ -28,6 +50,9 @@ body {
   @extend %clearfix;
   margin-top: $spacing-unit / 2;
   margin-bottom: $spacing-unit / 2;
+  position: fixed;
+  top: 0;
+  z-index: 99;
 
   a {
     text-decoration: none;
@@ -245,6 +270,98 @@ dl.post {
 
     .site-description {
       @include col(3, 5,  $last: true);
+    }
+  }
+}
+
+/*
+    Home page
+*/
+.home-page {
+  .site-content {
+    padding-top: 0;
+    border: none;
+  }
+}
+
+.cover {
+  position: relative;
+  z-index: 999;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("images/cover.jpg");
+  background-size: cover;
+  background-position: center center;
+
+  .site-logo {
+    display: block;
+    width: 15rem;
+    height: 25rem;
+    margin: 30vh auto 0;
+
+    svg {
+      transform: scale(1);
+      transition: transform .5s ease;
+
+      path {
+        fill: $color-text;
+        transition: fill .5s ease;
+      }
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.1);
+
+        path {
+          fill: $color-accent;
+        }
+      }
+    }
+  }
+
+
+  .skip-chevron {
+    display: block;
+    height: 1.5rem;
+    width: 2rem;
+    opacity: 0;
+    margin: 6vh auto 0;
+    transition: margin-top .5s ease, opacity .5s ease;
+
+    @include media-query($on-palm) {
+      opacity: 1;
+      margin-top: 3vh;
+    }
+
+    svg {
+      polygon {
+        fill: $color-text;
+        transition: fill .5s ease;
+      }
+    }
+
+    @include media-query($on-palm) {
+      &:hover {
+        svg {
+          polygon {
+            fill: $color-accent;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .skip-chevron {
+      opacity: 1;
+      margin-top: 7vh;
+
+      @include media-query($on-palm) {
+        margin-top: 3vh;
+      }
     }
   }
 }

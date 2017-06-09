@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" prefix="og: http://ogp.me/ns#">
+  {% include head.html %}
+
+  <body class="home-page" itemscope itemtype="http://schema.org/Blog">
+    {% include header.html %}
+
+    <main class="site-content">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+    <script type="text/javascript" src="{{ '/assets/js/responsive-embeds.js' | relative_url }}"></script>
+  </body>
+</html>
