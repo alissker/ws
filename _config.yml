@@ -1,0 +1,23 @@
+# Site settings
+title: WS
+lang: pt
+description: >
+  Initial settings and styles used in most os my projects with Jekyll in a simple repository.
+brand: "#EAE151"
+
+# Contact
+twitter: arthrfrts
+github: arthrfrts
+email: email@arthr.me
+
+# Build settings
+markdown: kramdown
+baseurl: ""
+url: ""
+
+gems:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

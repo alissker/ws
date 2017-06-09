@@ -1,0 +1,30 @@
+---
+# Hello, Jekyll!
+---
+
+// Font and text variables.
+$base-font-family: system;
+$base-font-size: 1.4rem;
+$base-font-weight: 400;
+$base-line-height: 1.5;
+
+// Color palette.
+$color-text: #4D4E53;
+$color-background: #F4F7F8;
+$color-accent: {{ site.brand }};
+$color-details: #FFF4CC;
+
+// Layout widths.
+$content-width: 950px;
+$on-laptop: 800px;
+$on-palm: 600px;
+
+$spacing-unit: 3rem;
+
+// Imports partials.
+@import "fonts",
+        "mixins",
+        "reset",
+        "layout",
+        "elements",
+        "syntax";

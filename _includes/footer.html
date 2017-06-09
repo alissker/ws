@@ -1,0 +1,22 @@
+<footer id="site-publisher" class="site-footer" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+  <div class="site-container">
+    <div class="footer-heading">
+      <a class="site-title" href="{{ '/' | absolute_url }}" itemprop="name">{{ site.title }}</a> &middot; <code><a href="{{ '/humans.txt' | relative_url }}">humans.txt</a></code>
+    </div>
+    <div class="site-links">
+      <ul class="site-contacts">
+        <li>{% include svg/mail.svg %} <a href="mailto:{{ site.email }}" itemprop="email">{{ site.email }}</a></li>
+        {% if site.twitter %}
+        <li>{% include svg/twitter.svg %} <a href="{{ site.twitter | prepend: 'https://twitter.com/' }}">{{ site.twitter }}</a></li>
+        {% endif %}
+        {% if site.github %}
+        <li>{% include svg/github.svg %} <a href="{{ site.github | prepend: 'https://github.com/' }}">{{ site.github }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="site-description">
+      <p>{{ site.description }}</p>
+    </div>
+  </div>
+</footer>

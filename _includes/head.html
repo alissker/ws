@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="{{ site.brand }}" />
+
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | normalize_whitespace | escape | truncate: 140 }}" />
+
+  <link rel="author" type="text/plain" href="{{ '/humans.txt' | absolute_url }}" />
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | relative_url }}" />
+  <link rel="canonical" href="{{ page.url | replace: 'index.html','' | absolute_url }}" />
+  <link rel="alternate" type="application/rss+xml" title="Feeds – {{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
+
+  {% include opengraph.html %}
+
+  {% include favicons.html %}
+
+  {% if site.google_analytics %}
+  {% include analytics.html %}
+  {% endif %}
+</head>

@@ -1,0 +1,250 @@
+html {
+  font-size: 62.5%; // Makes 1rem = 10px.
+}
+
+.site-container {
+  width: 100%;
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-query($on-laptop) {
+    max-width: calc(100% - (#{$spacing-unit}));
+    padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit / 2;
+  }
+}
+
+body {
+  border-top: .3rem solid $color-accent;
+}
+
+/*
+    Site Header
+*/
+.site-header {
+  @extend %clearfix;
+  margin-top: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
+
+  a {
+    text-decoration: none;
+  }
+
+  // Branding
+  .site-title {
+    font-size: $base-font-size * 1.5;
+    font-weight: 700;
+    line-height: 5.6rem;
+  }
+
+  // Main navigation
+  .site-navigation {
+    float: right;
+
+    #nav-trigger {
+      display: none;
+    }
+
+    .menu-trigger {
+      display: none;
+    }
+
+    .site-menu {
+      display: block;
+      margin-bottom: 0;
+
+      li {
+        display: inline-block;
+        line-height: 5.6rem;
+        margin-left: $spacing-unit / 2;
+      }
+    }
+
+    @include media-query($on-palm) {
+      text-align: right;
+      overflow: hidden;
+      position: relative;
+
+      .menu-trigger {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 5.6rem;
+        margin-left: 0;
+        text-align: right;
+        line-height: 5.6rem;
+
+        svg {
+          height: 2.8rem;
+          vertical-align: middle;
+
+          path {
+            fill: $color-text;
+            transition: fill .2s;
+          }
+        }
+      }
+
+      .site-menu {
+        position: absolute;
+        right: -999rem;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        overflow: visible;
+
+        #nav-trigger:checked ~ .menu-trigger {
+          svg {
+            path {
+              fill: $color-accent;
+            }
+          }
+        }
+
+        #nav-trigger:checked ~ .site-menu {
+          position: absolute;
+          right: 0;
+          top: 4rem;
+          background-color: darken($color-background, 5%);
+          padding: $spacing-unit / 4 $spacing-unit / 2;
+          border: .1rem solid darken($color-background, 15%);
+          border-radius: .3rem;
+
+          li {
+            display: block;
+            line-height: $base-line-height;
+            font-size: $base-font-size * 1.1;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  Site Content
+*/
+.site-content {
+  background-color: $color-background;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+  border-top: .1rem solid darken($color-background, 15%);
+  border-bottom: .1rem solid darken($color-background, 15%);
+}
+
+// Post Listing
+dl.post {
+  margin-left: 0;
+  margin-bottom: $spacing-unit / 2;
+
+  dt {
+    font-weight: 700;
+    font-size: $base-font-size * 1.2;
+  }
+
+  dd {
+    color: lighten($color-text, 25%);
+    font-size: $base-font-size * .75;
+
+    svg {
+      height: $base-font-size;
+      vertical-align: middle;
+    }
+
+    .post-tags {
+      margin-left: $spacing-unit / 4;
+    }
+  }
+}
+
+// Page Header
+.page {
+  .page-header {
+    margin-bottom: $spacing-unit;
+
+    .page-title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Post Meta
+.page {
+  .page-header .page-meta,
+  .page-footer {
+    font-size: $base-font-size * .75;
+    font-weight: 500;
+
+    & > span {
+      &:not(:first-child) {
+        margin-left: $spacing-unit / 2;
+      }
+    }
+
+    svg {
+      height: $base-font-size * .75;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .page-footer {
+    margin-top: $spacing-unit;
+    padding-top: $spacing-unit;
+    border-top: .1rem solid darken($color-background, 15%);
+  }
+}
+
+/*
+    Site Footer
+*/
+.site-footer {
+  margin-top: $spacing-unit;
+
+  .site-container {
+    @include row;
+
+    .footer-heading {
+      @include col(1,1);
+      @extend %clearfix;
+
+      .site-title {
+        font-weight: 700;
+        text-decoration: none;
+        font-size: $base-font-size * 1.2;
+      }
+    }
+
+    .site-links {
+      @include col(2, 5, $gap: $spacing-unit, $first: true);
+
+      .site-contacts {
+        margin-left: 0;
+
+        li {
+          display: inline-block;
+
+          &:not(:first-child) {
+            display: block;
+          }
+
+          svg {
+            height: $base-font-size;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    .site-description {
+      @include col(3, 5,  $last: true);
+    }
+  }
+}
