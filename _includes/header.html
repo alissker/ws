@@ -1,24 +1,24 @@
 <header class="site-header">
-  <div class="site-container">
-    <a class="site-title" href="{{ '/' | relative_url }}" itemprop="url">
-      <span itemprop="name">{{ site.title }}</span>
-    </a>
+  <a class="site-title" href="{{ '/' | relative_url }}" itemprop="url">{% include svg/logo.svg %}
+    <span itemprop="name">{{ site.title }}</span>
+  </a>
 
-    {% if site.pages %}
-    <nav class="site-navigation">
-      <input type="checkbox" id="nav-trigger" name="nav-trigger" />
-      <label class="menu-trigger" for="nav-trigger">
-          {% include svg/three-bars.svg %}
-      </label>
+  {% if site.pages %}
+  <nav class="site-navigation">
+    <input type="checkbox" id="nav-trigger" name="nav-trigger" />
+    <label class="menu-trigger" for="nav-trigger">
+        {% include svg/three-bars.svg %}
+    </label>
 
-      <ul class="site-menu">
-        {% for page in site.pages %}
-        {% if page.title %}
-        <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
-    {% endif %}
-  </div>
+    <ul class="site-menu">
+      <li><a href="#about">O Grupo</a></li>
+      <li><a href="#arquitetura">Arquitetura</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#ilu">Ilu</a></li>
+      <li><a href="#investimentos">Investimentos</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  {% endif %}
 </header>

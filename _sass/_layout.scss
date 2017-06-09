@@ -48,11 +48,14 @@ body {
 */
 .site-header {
   @extend %clearfix;
-  margin-top: $spacing-unit / 2;
-  margin-bottom: $spacing-unit / 2;
+  margin-top: $spacing-unit / 4;
+  padding-top: $spacing-unit / 2;
   position: fixed;
-  top: 0;
+  top: -.1rem;
   z-index: 99;
+  width: 100%;
+  padding: 0 $spacing-unit;
+  background-color: $color-text;
 
   a {
     text-decoration: none;
@@ -62,7 +65,29 @@ body {
   .site-title {
     font-size: $base-font-size * 1.5;
     font-weight: 700;
-    line-height: 5.6rem;
+    display: inline-block;
+
+    span {
+      display: none;
+    }
+
+    svg {
+      height: 4rem;
+      padding-top: .5rem;
+
+      path {
+        fill: $color-background;
+        transition: fill .5s ease;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: $color-accent;
+        }
+      }
+    }
   }
 
   // Main navigation
@@ -83,8 +108,16 @@ body {
 
       li {
         display: inline-block;
-        line-height: 5.6rem;
+        line-height: 5rem;
         margin-left: $spacing-unit / 2;
+
+        a {
+          color: $color-background;
+
+          &:hover {
+            color: $color-accent;
+          }
+        }
       }
     }
 
@@ -106,7 +139,7 @@ body {
           vertical-align: middle;
 
           path {
-            fill: $color-text;
+            fill: $color-background;
             transition: fill .2s;
           }
         }
@@ -132,16 +165,15 @@ body {
 
         #nav-trigger:checked ~ .site-menu {
           position: absolute;
-          right: 0;
-          top: 4rem;
-          background-color: darken($color-background, 5%);
+          right: -$spacing-unit / 2;
+          top: 5rem;
+          background-color: $color-text;
           padding: $spacing-unit / 4 $spacing-unit / 2;
-          border: .1rem solid darken($color-background, 15%);
-          border-radius: .3rem;
+          width: 100vw;
 
           li {
             display: block;
-            line-height: $base-line-height;
+            line-height: $base-line-height * 1.5;
             font-size: $base-font-size * 1.1;
             vertical-align: middle;
           }
@@ -281,6 +313,10 @@ dl.post {
   .site-content {
     padding-top: 0;
     border: none;
+
+    section {
+      height: 100vh;
+    }
   }
 }
 
