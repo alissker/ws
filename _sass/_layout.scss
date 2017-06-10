@@ -330,28 +330,14 @@ dl.post {
         text-transform: uppercase;
       }
 
-      &#sobre {
-        p {
-          columns: 2;
-          column-gap: $spacing-unit;
-          text-align: justify;
+      .section-description {
+        columns: 2;
+        column-gap: $spacing-unit;
+        text-align: justify;
+        margin-bottom: $spacing-unit;
 
-          @include media-query($on-palm) {
-            columns: 1;
-          }
-        }
-      }
-
-      &#design {
-        .section-description {
-          columns: 2;
-          column-gap: $spacing-unit;
-          text-align: justify;
-          margin-bottom: $spacing-unit;
-
-          @include media-query($on-palm) {
-            columns: 1;
-          }
+        @include media-query($on-palm) {
+          columns: 1;
         }
       }
     }
