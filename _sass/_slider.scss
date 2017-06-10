@@ -1,0 +1,59 @@
+.slider {
+
+  .frame {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    max-width: $content-width;
+
+    .slides {
+      display: inline-block;
+
+      .js_slide {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    .prev,
+    .next {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      margin-top: -2.5rem;
+      display: block;
+      cursor: pointer;
+      transition: opacity .3s ease;
+
+      svg {
+        height: 3rem;
+
+        polygon {
+          fill: $color-accent;
+        }
+      }
+    }
+
+    .next {
+      right: $spacing-unit / 2;
+    }
+
+    .prev {
+      left: $spacing-unit / 2;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .frame {
+      .prev,
+      .next {
+        opacity: 1;
+      }
+    }
+  }
+}

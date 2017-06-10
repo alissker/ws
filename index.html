@@ -4,9 +4,66 @@ layout: home
 <div class="cover">
   <a class="site-logo" href="{{ site.url | absolute_url }}">{% include svg/logo.svg %}</a>
 
-  <a class="skip-chevron" href="#">{% include svg/chevron-down.svg %}</a>
+  <a class="skip-chevron" href="#sobre">{% include svg/chevron-down.svg %}</a>
 </div>
 
-<section id="about" class="site-container">
-  <h1>Sobre</h1>
+<section id="sobre" class="home-section site-container">
+  <h1 class="section-heading">O Grupo WS</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <figure>
+    <img src="{{ '/assets/images/internal1.jpg' | relative_url }}" alt="Dois cálices e uma garrafa de vinho tinto sobre uma mesa de centro; um sofá de tecido escuro ao fundo, iluminado por uma janela com uma cortina branca." />
+  </figure>
 </section>
+
+<section id="arquitetura" class="home-section site-container row">
+  <h1 class="section-heading">Wayhs Arquitetura</h1>
+
+  <div class="half first">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    {% include figure.html src="/assets/images/house.jpg" alt="Casa azul com uma grande árvore ao lado" %}
+  </div>
+  <div class="half last">
+    {% include figure.html src="/assets/images/house2.jpg" alt="O terraço de uma casa, com plantas em suas varandas." %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</section>
+
+<blockquote class="testimonial site-container">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+  <cite>— Nome</cite>
+</blockquote>
+
+<section id="design" class="home-section site-container">
+  <h1 class="section-heading">WS Design</h1>
+
+  <div class="slider js_slider">
+    <div class="frame js_frame">
+      <figure class="slides js_slides">
+        <img class="js_slide active" src="{{ '/assets/images/decor1.jpg' | relative_url }}" />
+        <img class="js_slide" src="{{ '/assets/images/decor2.jpg' | relative_url }}" />
+        <img class="js_slide" src="{{ '/assets/images/decor3.jpg' | relative_url }}" />
+        <img class="js_slide" src="{{ '/assets/images/decor4.jpg' | relative_url }}" />
+      </figure>
+
+      <span class="js_prev prev">{% include svg/chevron-left.svg %}</span>
+      <span class="js_next next">{% include svg/chevron-right.svg %}</span>
+    </div>
+  </div>
+
+  <div class="section-description">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</section>
+
+<blockquote class="testimonial site-container">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+  <cite>— Nome</cite>
+</blockquote>
