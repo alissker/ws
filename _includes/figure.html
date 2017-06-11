@@ -1,5 +1,5 @@
 <figure {% if include.class %}class="{{ include.class }}"{% endif %} itemscope itemtype="http://schema.org/ImageObject">
-  <img src="{{ include.src }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}" itemprop="contentUrl url" />
+  <img src="{{ include.src | absolute_url }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}" itemprop="contentUrl url" />
 
   {% if include.caption %}
   <figcaption itemprop="caption">

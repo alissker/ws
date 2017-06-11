@@ -12,8 +12,8 @@ email: email@arthr.me
 
 # Build settings
 markdown: kramdown
-baseurl: ""
-url: ""
+baseurl: "/ws"
+url: "https://arthr.me"
 
 gems:
   - jekyll-sitemap
