@@ -346,6 +346,10 @@ dl.post {
     #noticias {
       .section-heading {
         text-align: left;
+
+        @include media-query($on-palm) {
+          text-align: center;
+        }
       }
     }
 
