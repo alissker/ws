@@ -191,8 +191,8 @@ body {
 */
 .site-content {
   background-color: $color-background;
-  padding-top: $spacing-unit;
-  padding-bottom: $spacing-unit;
+  padding-top: 0;
+  padding-bottom: 0;
   border-top: .1rem solid darken($color-background, 15%);
   border-bottom: .1rem solid darken($color-background, 15%);
 }
@@ -343,6 +343,12 @@ dl.post {
       }
     }
 
+    #noticias {
+      .section-heading {
+        text-align: left;
+      }
+    }
+
     .row {
       @include row;
 
@@ -355,6 +361,11 @@ dl.post {
   .testimonial {
     margin-top: $spacing-unit * 2;
     margin-bottom: $spacing-unit * 2;
+  }
+
+  .inverted {
+    background-color: $color-text;
+    color: $color-background;
   }
 }
 
@@ -470,5 +481,31 @@ dl.post {
     font-size: 75%;
     display: block;
     text-align: right;
+  }
+}
+
+#contact {
+  margin-bottom: 0;
+
+  address {
+    text-align: right;
+  }
+
+  .contact-links {
+    list-style: none;
+    margin-left: 0;
+    svg {
+      height: 1.4rem;
+      width: 1.6rem;
+
+      path {
+        fill: $color-background;
+      }
+    }
+
+    a {
+      color: $color-accent;
+      text-decoration: none;
+    }
   }
 }

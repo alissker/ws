@@ -9,10 +9,11 @@
         {{ content }}
     </main>
 
-    {% include footer.html %}
     <script type="text/javascript" src="{{ '/assets/js/responsive-embeds.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/slider.js' | relative_url }}"></script>
     <script type="text/javascript">
+      smoothScroll.init();
+      
       document.addEventListener('DOMContentLoaded', function () {
         var rewind = document.querySelector('.js_slider');
 
