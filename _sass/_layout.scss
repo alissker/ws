@@ -489,11 +489,16 @@ dl.post {
 
   address {
     text-align: right;
+
+    @include media-query($on-palm) {
+      text-align: center;
+    }
   }
 
   .contact-links {
     list-style: none;
     margin-left: 0;
+
     svg {
       height: 1.4rem;
       width: 1.6rem;
@@ -506,6 +511,10 @@ dl.post {
     a {
       color: $color-accent;
       text-decoration: none;
+    }
+
+    @include media-query($on-palm) {
+      text-align: center;
     }
   }
 }
