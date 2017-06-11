@@ -492,6 +492,7 @@ dl.post {
 
     @include media-query($on-palm) {
       text-align: center;
+      margin-bottom: $spacing-unit;
     }
   }
 
