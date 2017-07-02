@@ -378,6 +378,12 @@ body {
     width: 25%;
     margin: 0;
 
+    svg {
+      max-height: 6.4rem;
+      max-width: 6.4rem;
+      cursor: pointer;
+    }
+
     @include media-query($on-palm) {
       width: 50%;
       margin-bottom: $spacing-unit / 4;
@@ -393,6 +399,7 @@ body {
   padding: $spacing-unit $spacing-unit * 2;
   text-align: justify;
   position: relative;
+  box-shadow: inset 0 0 .4rem $color-background;
 
   .close-tab {
     position: absolute;
@@ -401,6 +408,7 @@ body {
     -webkit-appearance: none;
     background: none;
     border: none;
+    cursor: pointer;
 
     svg {
       width: 1.6rem;
@@ -419,8 +427,53 @@ body {
     font-size: $base-font-size * 1.3;
     text-transform: uppercase;
     font-weight: 300;
+    letter-spacing: 0.1em;
+    text-align: center;
   }
 }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: rgba($color-text, .8);
+  animation: fade .5s;
+
+  .close-lightbox {
+    position: absolute;
+    top: $spacing-unit;
+    right: $spacing-unit;
+
+    svg {
+      max-width: 1.6rem;
+      max-height: 1.6rem;
+      fill: $color-accent;
+    }
+  }
+
+  iframe {
+    width: 90vw;
+    height: 50.65vw;
+    margin-top: $spacing-unit * 2;
+    display: inline-block;
+    vertical-align: center;
+
+    @include media-query($on-palm) {
+      margin-top: calc(50.65vh / 2);
+    }
+  }
+
+  &:target {
+    outline: none;
+    display: block;
+  }
+}
+
 
 @keyframes fade {
   from {
@@ -429,16 +482,5 @@ body {
 
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    display: none;
   }
 }

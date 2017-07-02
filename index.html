@@ -2,19 +2,25 @@
 layout: home
 ---
 <div class="cover">
-  <h1 class="site-logo" onclick="play_pause()" aria-label="{{ site.title }}">{% include svg/logo.svg %}</h1>
+  <h1 class="site-logo" aria-label="{{ site.title }}"><a href="#video-container">{% include svg/logo.svg %}</a></h1>
 
   <a class="skip-chevron" data-scroll href="#sobre">{% include svg/chevron-down.svg %}</a>
+</div>
+
+<div id="video-container" class="lightbox">
+  <iframe src="https://player.vimeo.com/video/223518875?title=0&byline=0&portrait=0" allowfullscreen></iframe>
+
+  <a href="#_" class="close-lightbox" aria-disabled="true">{% include svg/x.svg %}</a>
 </div>
 
 <section id="sobre" class="home-section site-container">
   <h1 class="section-heading">WS Group</h1>
 
   <ul class="tabs">
-    <li class="tab" onclick="open_tab(event, 'Empresa1')">Empresa 1</li>
-    <li class="tab" onclick="open_tab(event, 'Empresa2')">Empresa 2</li>
-    <li class="tab" onclick="open_tab(event, 'Empresa3')">Empresa 3</li>
-    <li class="tab" onclick="open_tab(event, 'Empresa4')">Empresa 4</li>
+    <li class="tab" onclick="open_tab(event, 'Empresa1')">{% include svg/home.svg %}</li>
+    <li class="tab" onclick="open_tab(event, 'Empresa2')">{% include svg/link.svg %}</li>
+    <li class="tab" onclick="open_tab(event, 'Empresa3')">{% include svg/tags.svg %}</li>
+    <li class="tab" onclick="open_tab(event, 'Empresa4')">{% include svg/calendar.svg %}</li>
   </ul>
 
   <section id="Empresa1" class="tab-content">
