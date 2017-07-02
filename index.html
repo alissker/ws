@@ -2,162 +2,60 @@
 layout: home
 ---
 <div class="cover">
-  <a class="site-logo" href="{{ '/' | absolute_url }}">{% include svg/logo.svg %}</a>
+  <h1 class="site-logo" onclick="play_pause()" aria-label="{{ site.title }}">{% include svg/logo.svg %}</h1>
 
   <a class="skip-chevron" data-scroll href="#sobre">{% include svg/chevron-down.svg %}</a>
 </div>
 
 <section id="sobre" class="home-section site-container">
-  <h1 class="section-heading">O Grupo WS</h1>
+  <h1 class="section-heading">WS Group</h1>
 
-  <div class="section-description">
+  <ul class="tabs">
+    <li class="tab" onclick="open_tab(event, 'Empresa1')">Empresa 1</li>
+    <li class="tab" onclick="open_tab(event, 'Empresa2')">Empresa 2</li>
+    <li class="tab" onclick="open_tab(event, 'Empresa3')">Empresa 3</li>
+    <li class="tab" onclick="open_tab(event, 'Empresa4')">Empresa 4</li>
+  </ul>
+
+  <section id="Empresa1" class="tab-content">
+    <h2>Empresa 1</h2>
+
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
 
-  <figure>
-    <img src="{{ '/assets/images/internal1.jpg' | absolute_url }}" alt="Dois cálices e uma garrafa de vinho tinto sobre uma mesa de centro; um sofá de tecido escuro ao fundo, iluminado por uma janela com uma cortina branca." />
-  </figure>
+    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+  </section>
+
+  <section id="Empresa2" class="tab-content">
+    <h2>Empresa 2</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+  </section>
+
+  <section id="Empresa3" class="tab-content">
+    <h2>Empresa 3</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+  </section>
+
+  <section id="Empresa4" class="tab-content">
+    <h2>Empresa 4</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+  </section>
+
 </section>
 
-<section id="arquitetura" class="home-section site-container row">
-  <h1 class="section-heading">Wayhs Arquitetura</h1>
+<section id="portfolio" class="home-section site-container row">
+  <h1 class="section-heading">Portfólio</h1>
 
   <div class="half first">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    {% include figure.html src="/assets/images/house.jpg" alt="Casa azul com uma grande árvore ao lado" %}
-  </div>
-  <div class="half last">
-    {% include figure.html src="/assets/images/house2.jpg" alt="O terraço de uma casa, com plantas em suas varandas." %}
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</section>
-
-<blockquote class="testimonial site-container">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-  <cite>— Nome</cite>
-</blockquote>
-
-<section id="design" class="home-section site-container">
-  <h1 class="section-heading">WS Design</h1>
-
-  <div class="slider js_slider">
-    <div class="frame js_frame">
-      <figure class="slides js_slides">
-        <img class="js_slide active" src="{{ '/assets/images/decor1.jpg' | absolute_url }}" alt="" />
-        <img class="js_slide" src="{{ '/assets/images/decor2.jpg' | absolute_url }}" alt="" />
-        <img class="js_slide" src="{{ '/assets/images/decor3.jpg' | absolute_url }}" alt="" />
-        <img class="js_slide" src="{{ '/assets/images/decor4.jpg' | absolute_url }}" alt="" />
-      </figure>
-
-      <span class="js_prev prev">{% include svg/chevron-left.svg %}</span>
-      <span class="js_next next">{% include svg/chevron-right.svg %}</span>
-    </div>
-  </div>
-
-  <div class="section-description">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</section>
-
-<blockquote class="testimonial site-container">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-  <cite>— Nome</cite>
-</blockquote>
-
-<section id="ilu" class="home-section site-container">
-  <h1 class="section-heading">Ilu</h1>
-
-  <div class="row">
-    <div class="half first">
-      {% include figure.html src="/assets/images/ilu1.jpg" %}
-    </div>
-
-    <div class="half last">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="half first">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-
-    <div class="half last">
-      {% include figure.html src="/assets/images/ilu2.jpg" %}
-
-      {% include figure.html src="/assets/images/ilu3.jpg" %}
-    </div>
-  </div>
-</section>
-
-<section id="investimentos" class="home-section site-container">
-  <h1 class="section-heading">Investimentos</h1>
-
-  <iframe src="https://player.vimeo.com/video/207466022" width="640" height="274" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-  <div class="section-description">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <blockquote class="testimonial">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <cite>— Nome</cite>
-    </blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</section>
-
-<section id="noticias" class="home-section site-container row">
-  <h1 class="section-heading half first">Notícias</h1>
-
-  <div class="post-list half last">
-    <dl class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-      <dt itemprop="name headline"><a href="#" itemprop="url">Duis aute irure dolor in reprehenderit</a></dt>
-      <dd>
-        <time itemprop="datePublished dateModified">
-          {% include svg/calendar.svg %} 18/01/2017
-        </time>
-        <span class="post-tags" itemprop="keywords">
-          {% include svg/tags.svg %} eventos
-        </span>
-      </dd>
-    </dl>
-
-    <dl class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-      <dt itemprop="name headline"><a href="#" itemprop="url">Lorem ipsum dolor sit amet</a></dt>
-      <dd>
-        <time itemprop="datePublished dateModified">
-          {% include svg/calendar.svg %} 14/02/2017
-        </time>
-        <span class="post-tags" itemprop="keywords">
-          {% include svg/tags.svg %} projetos
-        </span>
-      </dd>
-    </dl>
-
-    <dl class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-      <dt itemprop="name headline"><a href="#" itemprop="url">Excepteur sint occaecat cupidatat non proident</a></dt>
-      <dd>
-        <time itemprop="datePublished dateModified">
-          {% include svg/calendar.svg %} 01/07/2017
-        </time>
-        <span class="post-tags" itemprop="keywords">
-          {% include svg/tags.svg %} anúncios
-        </span>
-      </dd>
-    </dl>
+    <p>Em pesquisa e desenvolvimento.</p>
   </div>
 </section>
 
