@@ -2,66 +2,120 @@
 layout: home
 ---
 <div class="cover">
-  <h1 class="site-logo" aria-label="{{ site.title }}"><a href="#video-container">{% include svg/logo.svg %}</a></h1>
+  <h1 class="site-logo" aria-label="{{ site.title }}"><a href="#about-container">{% include svg/logo.svg %}</a></h1>
 
   <a class="skip-chevron" data-scroll href="#sobre">{% include svg/chevron-down.svg %}</a>
 </div>
 
-<div id="video-container" class="lightbox">
-  <iframe src="https://player.vimeo.com/video/223518875?title=0&byline=0&portrait=0" allowfullscreen></iframe>
+<div id="about-container" class="lightbox">
+  <div class="home-section site-container">
+    <h1>WS Group</h1>
+
+    <p>O grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente deste setor procura.</p>
+    <p>Por isso, nós unimos quatro empresas do setor da Arquitetura e Consultoria Imobiliária, são elas: <strong>WS Invest</strong>, <strong>Martin Wayhs Arquitetura</strong>, <strong>WS Design</strong> e <strong>Ilumion</strong>.</p>
+    <p>Cada uma delas, oferece um tipo de solução para o nosso cliente, a fim de proporcionar um serviço eficiente, qualificado e completo.</p>
+    <dl>
+      <dt>WS Invest</dt>
+      <dd>Auxiliamos você a encontrar o imóvel dos sonhos.</dd>
+    </dl>
+
+    <dl>
+      <dt>Martin Wayhs Arquitetura</dt>
+      <dd>Desenvolvemos projetos arquitetônicos e projeto de interiores.</dd>
+    </dl>
+
+    <dl>
+      <dt>Ilumion</dt>
+      <dd>Transformamos os ambientes internos e externos com os efeitos que só a iluminação proporciona. Além do projeto luminotécnico, oferecemos os produtos, e também desenvolvemos luminárias personalizadas.</dd>
+    </dl>
+
+    <dl>
+      <dt>WS Design</dt>
+      <dd>Temos a nossa própria marca de móveis sob medida, desenvolvemos o projeto exclusivo para você.</dd>
+    </dl>
+
+    <p>Então, este é o objetivo da WS Group, oferecer aquilo que você precisa. Aquilo que não fornecemos, nós auxiliamos você a encontrar a melhor solução.</p>
+    <p>Cada empresa é independente, por isso, os serviços podem ser contratados separadamente. Mas também somos um grupo, então você pode adquirir o pacote completo, tudo depende da sua necessidade.</p>
+  </div>
+
 
   <a href="#_" class="close-lightbox" aria-disabled="true">{% include svg/x.svg %}</a>
 </div>
 
-<section id="sobre" class="home-section site-container">
-  <h1 class="section-heading">WS Group</h1>
+<div id="sobre" class="home-section site-container">
+  <iframe src="https://player.vimeo.com/video/55140149?title=0&byline=&portrait=0" frameborder="0" allowfullscreen></iframe>
 
-  <ul class="tabs">
-    <li class="tab" onclick="open_tab(event, 'Empresa1')">{% include svg/home.svg %}</li>
-    <li class="tab" onclick="open_tab(event, 'Empresa2')">{% include svg/link.svg %}</li>
-    <li class="tab" onclick="open_tab(event, 'Empresa3')">{% include svg/tags.svg %}</li>
-    <li class="tab" onclick="open_tab(event, 'Empresa4')">{% include svg/calendar.svg %}</li>
-  </ul>
+  <section class="home-section site-container">
+    <h1 class="section-heading">WS Group</h1>
 
-  <section id="Empresa1" class="tab-content">
-    <h2>Empresa 1</h2>
+    <p class="headline">A WS Group é um grupo de empresas independentes que oferecem produtos e serviços no ramo de Arquitetura e Consultoria Imobiliária. Empresas que constituem o grupo:</p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <ul class="tabs">
+      <li class="tab" onclick="open_tab(event, 'Invest')">{% include svg/building.svg %}</li>
+      <li class="tab" onclick="open_tab(event, 'Martin')">{% include svg/design.svg %}</li>
+      <li class="tab" onclick="open_tab(event, 'Design')">{% include svg/furniture.svg %}</li>
+      <li class="tab" onclick="open_tab(event, 'Ilumion')">{% include svg/lamp.svg %}</li>
+    </ul>
 
-    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+    <section id="Invest" class="tab-content">
+      <figure class="service">
+        <img src="{{ '/assets/images/invest.jpg' | relative_url }}" />
+
+        <figcaption>
+          <h2>WS Invest</h2>
+          <p>Empresa que auxilia na consultoria da compra de imóveis.</p>
+        </figcaption>
+      </figure>
+
+      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+    </section>
+
+    <section id="Martin" class="tab-content">
+      <figure class="service">
+        <img src="{{ '/assets/images/arquitect.jpg' | relative_url }}" />
+
+        <figcaption>
+          <h2>Martin Wayhs Arquitetura</h2>
+          <p>Empresa que desenvolve projetos arquitetônicos e projeto de interiores.</p>
+        </figcaption>
+      </figure>
+
+      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+    </section>
+
+    <section id="Design" class="tab-content">
+      <figure class="service">
+        <img src="{{ '/assets/images/design.jpg' | relative_url }}" />
+
+        <figcaption>
+          <h2>WS Design</h2>
+          <p>Empresa de móveis sob medida.</p>
+        </figcaption>
+      </figure>
+      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+    </section>
+
+    <section id="Ilumion" class="tab-content">
+      <figure class="service">
+        <img src="{{ '/assets/images/ilumion.jpg' | relative_url }}" />
+
+        <figcaption>
+          <h2>WS Ilumion</h2>
+          <p>Empresa de projetos e produtos em iluminação.</p>
+        </figcaption>
+      </figure>
+
+      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+    </section>
+
   </section>
-
-  <section id="Empresa2" class="tab-content">
-    <h2>Empresa 2</h2>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-  </section>
-
-  <section id="Empresa3" class="tab-content">
-    <h2>Empresa 3</h2>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-  </section>
-
-  <section id="Empresa4" class="tab-content">
-    <h2>Empresa 4</h2>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-  </section>
-
-</section>
+</div>
 
 <section id="portfolio" class="home-section site-container row">
   <h1 class="section-heading">Portfólio</h1>
 
   <div class="half first">
-    <p>Em pesquisa e desenvolvimento.</p>
+    <p>(Em desenvolvimento.)</p>
   </div>
 </section>
 
@@ -86,5 +140,13 @@ layout: home
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="equipe" class="home-section inverted">
+  <div class="site-container">
+    <h1 class="section-heading">Profissionais</h1>
+
+    <p>(Aguardando mais informações).</p>
   </div>
 </section>

@@ -1,4 +1,11 @@
 function open_tab(evt, target) {
+
+  if(evt.currentTarget.classList.contains('active')) {
+    document.getElementById(target).style.display = "none";
+    evt.currentTarget.className = evt.currentTarget.className.replace('active', '');
+    return;
+  }
+
   var i, tab_content, tab_links;
 
   // Hides all tabs contents.
