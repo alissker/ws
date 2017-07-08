@@ -1,17 +1,20 @@
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  hyphens: auto;
-  word-break: normal;
+  background-color: $color-background;
 }
 
-/*
-    Text Elements
-*/
-p, ul, ol, dl, pre
-table, pre, blockquote {
+p, ul, ol, dl,
+blockquote, pre,
+table, address, figure,
+iframe, embed, object,
+video, audio,
+%vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
 
+/*
+    Text Elements.
+*/
 em, i {
   font-style: italic;
 }
@@ -20,29 +23,30 @@ strong, b {
   font-weight: 700;
 }
 
+// Links
+a,
+a:visited {
+  color: $color-accent;
+  text-decoration: none;
 
-// Headings
-h1, h2, h3,
-h4, h5, h6 {
-  font-weight: 700;
-}
-
-h1, h2, h3 {
-  margin-bottom: $spacing-unit / 2;
-}
-
-h4, h5, h6 {
-  margin-bottom: 0;
-}
-
-h1 {
-  font-size: $base-font-size * 2;
-  margin-bottom: $spacing-unit / 2;
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+  }
 }
 
 // Lists
 ul, ol, dl {
-  margin-left: $spacing-unit / 2;
+  margin-left: $spacing-unit;
+}
+
+ul, ol {
+  list-style-position: outside;
+
+  ul, ol {
+    margin-bottom: 0;
+  }
 }
 
 ul {
@@ -50,10 +54,6 @@ ul {
 
   ul {
     list-style-type: disc;
-
-    ul {
-      list-style-type: circle;
-    }
   }
 }
 
@@ -69,101 +69,62 @@ ol {
   }
 }
 
-ul, ol {
-  list-style-position: outside;
+dl {
+  dt {
+    font-weight: 700;
+  }
 
-  ul, ol {
-    margin-bottom: 0;
+  dd {
+    margin-bottom: $spacing-unit / 2;
   }
 }
 
-// Links
-a {
-  color: $color-text;
-  text-decoration-color: $color-accent;
-  -webkit-text-decoration-color: $color-accent;
-  transition: color .3s, text-decoration-color .15s;
-
-  &:hover,
-  &:focus {
-    color: $color-accent;
-    text-decoration-color: transparent;
-  }
-}
-
-// Blockquotes
+// Citations
 blockquote {
-  font-family: serif;
-  font-size: $base-font-size * 1.4;
-  line-height: 1.6;
-  font-style: italic;
-  border-radius: .3rem;
+  border-left: .2rem solid $color-accent;
+  padding-left: $spacing-unit;
 
-  &.pull {
-    float: right;
-    max-width: 30rem;
-    margin-left: $spacing-unit / 2;
-    background-color: #fff;
-    box-shadow: 0 0 .4rem darken($color-background, 15%);
-    padding: $spacing-unit / 4 $spacing-unit / 2;
-
-    @include media-query($on-palm) {
-      max-width: 100%;
-      float: none;
-      margin-left: 0;
-    }
-  }
-}
-
-// Codes
-pre, code,
-kbd, var, tt {
-  font-family: Consolas, Monaco, monospace;
-  font-size: $base-font-size * .85;
-}
-
-// Tables
-table {
-  max-width: 100%;
-  background-color: #ffffff;
-  border-radius: .3rem;
-  box-shadow: inset 0 0 .4rem darken($color-background, 15%);
-
-  tr {
-
-    th, td {
-      padding: $spacing-unit / 3;
-      text-align: left;
-    }
-
-    th {
-      font-weight: 700;
-    }
-  }
-
-  thead tr,
-  tbody tr:not(:last-child) {
-    border-bottom: .1rem solid darken($color-background, 15%);
-  }
-}
-
-/*
-    Media Elements
-*/
-iframe, embed, object,
-figure, video, audio {
-  margin-bottom: $spacing-unit;
-}
-
-// Figures
-img {
-  max-width: 100%;
-  border-radius: .3rem;
-}
-
-figure {
-  figcaption {
-    font-size: $base-font-size * .75;
+  p {
     font-style: italic;
+    font-size: $base-font-size * 1.2;
   }
+
+  cite {
+    font-style: normal;
+    font-size: $base-font-size;
+
+    &:before {
+      content: "— ";
+    }
+  }
+}
+
+// Headings
+h1, h2 {
+  margin-bottom: $spacing-unit;
+  text-align: center;
+}
+
+h1, h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: $base-font-size * 1.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: $base-font-size * 1.2;
+}
+
+h3 {
+  font-weight: 700;
+  text-align: center;
+  font-size: $base-font-size * 1.1;
+  margin-bottom: $spacing-unit / 2;
 }

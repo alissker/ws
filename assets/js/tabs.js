@@ -15,7 +15,7 @@ function open_tab(evt, target) {
   }
 
   // Removes "active" from all tab links.
-  tab_links = document.getElementsByClassName("tab");
+  tab_links = document.getElementsByClassName("tab-link");
   for (i = 0; i < tab_links.length; i++) {
     tab_links[i].className = tab_links[i].className.replace(" active", "");
   }

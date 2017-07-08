@@ -1,152 +1,81 @@
 ---
-layout: home
+layout: default
 ---
-<div class="cover">
-  <h1 class="site-logo" aria-label="{{ site.title }}"><a href="#about-container">{% include svg/logo.svg %}</a></h1>
+<iframe class="jumbo-video page-block" src="https://player.vimeo.com/video/55140149?portrait=0&byline=0&title=0" allowfullscreen></iframe>
 
-  <a class="skip-chevron" data-scroll href="#sobre">{% include svg/chevron-down.svg %}</a>
-</div>
+<section id="sobre" class="page-block site-container">
+  <h1>WS Group</h1>
 
-<div id="about-container" class="lightbox">
-  <div class="home-section site-container">
-    <h1>WS Group</h1>
+  <div class="page-block-main-content">
+    <p>O Grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente desse setor procura.</p>
 
-    <p>O grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente deste setor procura.</p>
-    <p>Por isso, nós unimos quatro empresas do setor da Arquitetura e Consultoria Imobiliária, são elas: <strong>WS Invest</strong>, <strong>Martin Wayhs Arquitetura</strong>, <strong>WS Design</strong> e <strong>Ilumion</strong>.</p>
-    <p>Cada uma delas, oferece um tipo de solução para o nosso cliente, a fim de proporcionar um serviço eficiente, qualificado e completo.</p>
-    <dl>
-      <dt>WS Invest</dt>
-      <dd>Auxiliamos você a encontrar o imóvel dos sonhos.</dd>
-    </dl>
+    <p>Por isso, nós unimos quatro empresas do setor de Arquitetura &amp; Consultoria Imobiliária. São elas: <em>WS Invest</em>, <em>Martin Wayhs Arquitetura</em>, <em>WS Design</em> e <em>Ilumion</em>.</p>
 
-    <dl>
-      <dt>Martin Wayhs Arquitetura</dt>
-      <dd>Desenvolvemos projetos arquitetônicos e projeto de interiores.</dd>
-    </dl>
+    <p>Cada uma delas oferece um tipo de solução para o nosso cliente, afim de proporcionar um serviço eficiente, qualificado e completo.</p>
 
-    <dl>
-      <dt>Ilumion</dt>
-      <dd>Transformamos os ambientes internos e externos com os efeitos que só a iluminação proporciona. Além do projeto luminotécnico, oferecemos os produtos, e também desenvolvemos luminárias personalizadas.</dd>
-    </dl>
+    <p>Então, esse é o objetivo da WS Group: oferecer aquilo que você precisa. O que não oferecemos, auxiliaremos você a encontrar a melhor solução.</p>
 
-    <dl>
-      <dt>WS Design</dt>
-      <dd>Temos a nossa própria marca de móveis sob medida, desenvolvemos o projeto exclusivo para você.</dd>
-    </dl>
-
-    <p>Então, este é o objetivo da WS Group, oferecer aquilo que você precisa. Aquilo que não fornecemos, nós auxiliamos você a encontrar a melhor solução.</p>
-    <p>Cada empresa é independente, por isso, os serviços podem ser contratados separadamente. Mas também somos um grupo, então você pode adquirir o pacote completo, tudo depende da sua necessidade.</p>
+    <p>Cada empresa é independente. Por iss, os serviços podem ser contratados separadamente; mas também somos um grupo, então você pode adquirir o pacote completo — tudo depende de sua necessidade.</p>
   </div>
 
+  <h2>Conheça as empresas do grupo:</h2>
 
-  <a href="#_" class="close-lightbox" aria-disabled="true">{% include svg/x.svg %}</a>
-</div>
+  <ul class="tabs">
+    <li class="tab-link">
+      <a href="javascript:void(0)" onclick="open_tab(event, 'Invest')" aria-label="WS Invest">{% include svg/building.svg %}</a>
+    </li>
+    <li class="tab-link">
+      <a href="javascript:void(0)" onclick="open_tab(event, 'Martin')" aria-label="Martin Wayhs Arquitetura">{% include svg/home.svg %}</a>
+    </li>
+    <li class="tab-link">
+      <a href="javascript:void(0)" onclick="open_tab(event, 'Design')" aria-label="WS Design">{% include svg/furniture.svg %}</a>
+    </li>
+    <li class="tab-link">
+      <a href="javascript:void(0)" onclick="open_tab(event, 'Ilumion')" aria-label="Ilumion">{% include svg/lamp.svg %}</a>
+    </li>
+  </ul>
+  <div class="tab-container">
+    <figure id="Invest" class="tab-content">
+      <img src="{{ '/assets/images/invest.jpg' | relative_url }}" alt="" />
 
-<div id="sobre" class="home-section site-container">
-  <iframe src="https://player.vimeo.com/video/55140149?title=0&byline=&portrait=0" frameborder="0" allowfullscreen></iframe>
-
-  <section class="home-section site-container">
-    <h1 class="section-heading">WS Group</h1>
-
-    <p class="headline">A WS Group é um grupo de empresas independentes que oferecem produtos e serviços no ramo de Arquitetura e Consultoria Imobiliária. Empresas que constituem o grupo:</p>
-
-    <ul class="tabs">
-      <li class="tab" onclick="open_tab(event, 'Invest')">{% include svg/building.svg %}</li>
-      <li class="tab" onclick="open_tab(event, 'Martin')">{% include svg/design.svg %}</li>
-      <li class="tab" onclick="open_tab(event, 'Design')">{% include svg/furniture.svg %}</li>
-      <li class="tab" onclick="open_tab(event, 'Ilumion')">{% include svg/lamp.svg %}</li>
-    </ul>
-
-    <section id="Invest" class="tab-content">
-      <figure class="service">
-        <img src="{{ '/assets/images/invest.jpg' | relative_url }}" />
-
-        <figcaption>
-          <h2>WS Invest</h2>
-          <p>Empresa que auxilia na consultoria da compra de imóveis.</p>
-        </figcaption>
-      </figure>
-
+      <figcaption>
+        <h3>WS Invest</h3>
+        <p>Auxiliamos você a encontrar o imóvel dos sonhos.</p>
+        <p>A <em>WS Invest</em> é a empresa que auxilia na consultoria da compra de imóveis.</p>
+      </figcaption>
       <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </section>
+    </figure>
 
-    <section id="Martin" class="tab-content">
-      <figure class="service">
-        <img src="{{ '/assets/images/arquitect.jpg' | relative_url }}" />
+    <figure id="Martin" class="tab-content">
+      <img src="{{ '/assets/images/arquitect.jpg' | relative_url }}" alt="" />
 
-        <figcaption>
-          <h2>Martin Wayhs Arquitetura</h2>
-          <p>Empresa que desenvolve projetos arquitetônicos e projeto de interiores.</p>
-        </figcaption>
-      </figure>
-
+      <figcaption>
+        <h3>Martin Wayhs Arquitetura</h3>
+        <p>Desenvolvemos projetos arquitetônicos e projeto de interiores.</p>
+      </figcaption>
       <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </section>
+    </figure>
 
-    <section id="Design" class="tab-content">
-      <figure class="service">
-        <img src="{{ '/assets/images/design.jpg' | relative_url }}" />
+    <figure id="Design" class="tab-content">
+      <img src="{{ '/assets/images/design.jpg' | relative_url }}" alt="" />
 
-        <figcaption>
-          <h2>WS Design</h2>
-          <p>Empresa de móveis sob medida.</p>
-        </figcaption>
-      </figure>
+      <figcaption>
+        <h3>WS Design</h3>
+
+        <p>Temos a nossa própria marca de móveis sob medida. Desenvolvemos um projeto exclusivo para você.</p>
+      </figcaption>
       <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </section>
+    </figure>
 
-    <section id="Ilumion" class="tab-content">
-      <figure class="service">
-        <img src="{{ '/assets/images/ilumion.jpg' | relative_url }}" />
+    <figure id="Ilumion" class="tab-content">
+      <img src="{{ '/assets/images/ilumion.jpg' | relative_url }}" alt="" />
 
-        <figcaption>
-          <h2>WS Ilumion</h2>
-          <p>Empresa de projetos e produtos em iluminação.</p>
-        </figcaption>
-      </figure>
+      <figcaption>
+        <h3>Ilumion</h3>
 
+        <p>Transformamos os ambientes internos e externos com os efeitos que só a iluminação proporciona. Além do projeto luminotécnico, oferecemos os produtos, e também desenvolvemos luminárias personalizadas.</p>
+      </figcaption>
       <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </section>
-
-  </section>
-</div>
-
-<section id="portfolio" class="home-section site-container row">
-  <h1 class="section-heading">Portfólio</h1>
-
-  <div class="half first">
-    <p>(Em desenvolvimento.)</p>
-  </div>
-</section>
-
-<section id="contato" class="home-section inverted">
-  <div class="site-container">
-    <h1 class="section-heading">Contato</h1>
-
-    <div class="row">
-      <div class="half first">
-        <address class="contact-address">
-          Av. João Pessoa, 123<br />
-          Porto Alegre, RS<br />
-          Brasil.
-        </address>
-      </div>
-
-      <div class="half last">
-        <ul class="contact-links">
-          <li>{% include svg/mail.svg %} <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          <li>{% include svg/device-mobile.svg %} <a href="+5555999999999">+55 51 999-999-999</a></li>
-          <li>{% include svg/facebook.svg %} <a href="https://www.facebook.com/">fb.com/WS</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="equipe" class="home-section inverted">
-  <div class="site-container">
-    <h1 class="section-heading">Profissionais</h1>
-
-    <p>(Aguardando mais informações).</p>
+    </figure>
   </div>
 </section>
