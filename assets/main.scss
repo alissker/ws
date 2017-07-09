@@ -15,7 +15,7 @@ $color-accent: {{ site.brand }};
 $color-details: #00b7e4;
 
 // Layout widths.
-$content-width: 950px;
+$content-width: 850px;
 $on-laptop: 800px;
 $on-palm: 600px;
 
@@ -25,7 +25,5 @@ $spacing-unit: 3rem;
 @import "fonts",
         "mixins",
         "reset",
-        "layout",
         "elements",
-        "syntax",
-        "slider";
+        "layout";

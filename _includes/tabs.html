@@ -1,0 +1,7 @@
+<ul class="tabs">
+{% for tab in site.data.services %}
+  <li class="tab-link">
+    <a href="javascript:void(0)" onclick="open_tab(event, '{{ tab.id }}')" aria-label="{{ tab.name }}">{% include svg/{{ tab.icon }}.svg %}</a>
+  </li>
+{% endfor %}
+</ul>
