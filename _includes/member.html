@@ -1,0 +1,8 @@
+<figure class="member">
+  <img src="{{ member.portrait | prepend: '/assets/images/' | relative_url }}" alt="" />
+
+  <figcaption>
+    <p><strong>{{ member.name }}</strong><br />
+      {{ member.description }}</p>
+  </figcaption>
+</figure>

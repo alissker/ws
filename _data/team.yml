@@ -1,0 +1,27 @@
+- name: Martin Wayhs
+  portrait: male.png
+  description: Descrição da pessoa.
+
+- name: Dilson Stein
+  portrait: male.png
+  description: Descrição da pessoa.
+
+- name: Simone Stein
+  portrait: female.png
+  description: Descrição da pessoa.
+
+- name: Rodrigo Wayhs
+  portrait: male.png
+  description: Descrição da pessoa.
+
+- name: Rayanne Goi Scarton
+  portrait: female.png
+  description: Descrição da pessoa.
+
+- name: Liara Foletto
+  portrait: female.png
+  description: Descrição da pessoa.
+
+- name: Rafaela Noll
+  portrait: female.png
+  description: Descrição da pessoa.

@@ -1,3 +1,20 @@
+function open_portfolio(evt, target) {
+  if(evt.currentTarget.classList.contains('active')) {
+    document.getElementById(target).style.display = "none"
+  }
+
+  var i, slideshow, link;
+
+  slideshow = document.getElementsByClassName("slideshow-container");
+  for(i = 0; i < slideshow.length; i++) {
+    slideshow[i].style.display = "none"
+  }
+
+  document.getElementById(target).style.display = "block";
+  show_slides(target, 1);
+}
+
+
 function open_tab(evt, target) {
 
   if(evt.currentTarget.classList.contains('active')) {

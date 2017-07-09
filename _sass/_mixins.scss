@@ -29,3 +29,12 @@
   display: table;
   clear: both;
 }
+
+@keyframes fade {
+  from {
+    opacity: 0.3
+  }
+  to {
+    opacity: 1
+  }
+}

@@ -1,0 +1,11 @@
+{% for service in site.data.services %}
+<figure id="{{ service.id }}" class="tab-content">
+  <img src="{{ service.image | prepend: '/assets/images/' | relative_url }}" alt="" />
+
+  <figcaption>
+    <h3>{{ service.name }}</h3>
+    <p>{{ service.description }}
+  </figcaption>
+  <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
+</figure>
+{% endfor %}

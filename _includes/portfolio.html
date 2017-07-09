@@ -1,0 +1,43 @@
+<div class="regions">
+  <div class="region">
+    <h2>Santa Catarina</h2>
+    <ul>
+      {% assign projects = site.data.portfolio | where: 'region','sc' %}
+      {% for project in projects %}
+      <li><a onclick="open_portfolio(event, '{{ project.id }}'); document.querySelector('#{{ project.id }}').scrollIntoView({ behavior: 'smooth' });" href="javascript:void(0)">{{ project.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="region">
+    <h2>Rio Grande do Sul</h2>
+    <ul>
+      {% assign projects = site.data.portfolio | where: 'region','rs' %}
+      {% for project in projects %}
+      <li><a onclick="open_portfolio(event, '{{ project.id }}'); document.querySelector('#{{ project.id }}').scrollIntoView({ behavior: 'smooth' });" href="javascript:void(0)">{{ project.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+{% for project in site.data.portfolio %}
+<div id="{{ project.id }}" class="slideshow-container">
+  <h2>{{ project.name }}</h2>
+
+  <figure class="slideshow">
+    {% for image in project.images %}
+    <img class="slide fade" src="{{ image | prepend: '/assets/media/' | relative_url }}" alt="" />
+    {% endfor %}
+  </figure>
+
+  <a class="slideshow-navigation previous-slide" onclick="nav_slides('{{ project.id }}', -1)" href="javascript:void(0)">{% include svg/chevron-left.svg %}</a>
+  <a class="slideshow-navigation next-slide" onclick="nav_slides('{{ project.id }}', 1)" href="javascript:void(0)">{% include svg/chevron-right.svg %}</a>
+
+  <div class="slideshow-pagination">
+    {% for image in project.images %}
+    <span class="dot" onclick="goto_slide('{{ project.id }}', {{ forloop.index }})"></span>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}

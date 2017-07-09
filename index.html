@@ -20,62 +20,66 @@ layout: default
 
   <h2>Conheça as empresas do grupo:</h2>
 
-  <ul class="tabs">
-    <li class="tab-link">
-      <a href="javascript:void(0)" onclick="open_tab(event, 'Invest')" aria-label="WS Invest">{% include svg/building.svg %}</a>
-    </li>
-    <li class="tab-link">
-      <a href="javascript:void(0)" onclick="open_tab(event, 'Martin')" aria-label="Martin Wayhs Arquitetura">{% include svg/home.svg %}</a>
-    </li>
-    <li class="tab-link">
-      <a href="javascript:void(0)" onclick="open_tab(event, 'Design')" aria-label="WS Design">{% include svg/furniture.svg %}</a>
-    </li>
-    <li class="tab-link">
-      <a href="javascript:void(0)" onclick="open_tab(event, 'Ilumion')" aria-label="Ilumion">{% include svg/lamp.svg %}</a>
-    </li>
-  </ul>
+  {% include tabs.html %}
   <div class="tab-container">
-    <figure id="Invest" class="tab-content">
-      <img src="{{ '/assets/images/invest.jpg' | relative_url }}" alt="" />
+      {% include services.html %}
+  </div>
+</section>
 
-      <figcaption>
-        <h3>WS Invest</h3>
-        <p>Auxiliamos você a encontrar o imóvel dos sonhos.</p>
-        <p>A <em>WS Invest</em> é a empresa que auxilia na consultoria da compra de imóveis.</p>
-      </figcaption>
-      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </figure>
+<section id="equipe" class="page-block site-container">
+  <h1>Profissionais</h1>
 
-    <figure id="Martin" class="tab-content">
-      <img src="{{ '/assets/images/arquitect.jpg' | relative_url }}" alt="" />
+  <div class="team-members col-4">
+    {% for member in site.data.team limit: 4 %}
+    {% include member.html %}
+    {% endfor %}
+  </div>
 
-      <figcaption>
-        <h3>Martin Wayhs Arquitetura</h3>
-        <p>Desenvolvemos projetos arquitetônicos e projeto de interiores.</p>
-      </figcaption>
-      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </figure>
+  <div class="team-members col-3">
+    {% for member in site.data.team offset: 4 %}
+    {% include member.html %}
+    {% endfor %}
+  </div>
+</section>
 
-    <figure id="Design" class="tab-content">
-      <img src="{{ '/assets/images/design.jpg' | relative_url }}" alt="" />
+<section id="portfolio" class="page-block site-container">
+  <h1>Portfólio</h1>
 
-      <figcaption>
-        <h3>WS Design</h3>
+  {% include portfolio.html %}
+</section>
 
-        <p>Temos a nossa própria marca de móveis sob medida. Desenvolvemos um projeto exclusivo para você.</p>
-      </figcaption>
-      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </figure>
+<section id="contato" class="page-block inverted">
+  <div class="site-container">
+    <h1>Contato</h1>
 
-    <figure id="Ilumion" class="tab-content">
-      <img src="{{ '/assets/images/ilumion.jpg' | relative_url }}" alt="" />
+    <address>
+      <p class="address">
+        Endereço, No.<br />
+        Cidade, Estado<br />
+        País. CEP: 99999-999
+      </p>
 
-      <figcaption>
-        <h3>Ilumion</h3>
+      <ul class="links">
+        <li>Segundas às sextas: 9h – 20h</li>
+        <li>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li>Telefone: <a href="+5551999999999">+55 (51) 999-999-999</a></li>
+      </ul>
+    </address>
 
-        <p>Transformamos os ambientes internos e externos com os efeitos que só a iluminação proporciona. Além do projeto luminotécnico, oferecemos os produtos, e também desenvolvemos luminárias personalizadas.</p>
-      </figcaption>
-      <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">{% include svg/x.svg %}</button>
-    </figure>
+    <h2>Siga-nos:</h2>
+    <ul class="social-links">
+      <li aria-label="Facebook">
+        <a href="https://www.facebook.com/">{% include svg/facebook.svg %}</a>
+      </li>
+      <li aria-label="Twitter">
+        <a href="https://twitter.com/">{% include svg/twitter.svg %}</a>
+      </li>
+      <li aria-label="Tumblr">
+        <a href="https://tumblr.com/">{% include svg/tumblr.svg %}</a>
+      </li>
+      <li aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/">{% include svg/linkedin.svg %}</a>
+      </li>
+    </ul>
   </div>
 </section>
