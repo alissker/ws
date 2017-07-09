@@ -2,19 +2,6 @@
 <meta property="og:title" content="{{ page.title | default: site.title | strip_html | normalize_whitespace }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta name="twitter:site" content="{{ site.twitter | prepend: '@' }}" />
-{% if page.title %}
 <meta property="og:type" content="article" />
 <meta name="twitter:card" content="summary_large_image" />
-{% assign author = site.data.authors[page.author] %}
-<meta property="og:article:author" content="{{ author.name }}" />
-<meta name="twitter:creator" content="{{ author.twitter | prepend: '@' }}" />
-{% else %}
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-{% endif %}
-<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | normalize_whitespace | escape | truncate: 140 }}" />
-{% if page.cover %}
-<meta property="og:image" content="{{ page.cover.url | prepend: '/assets/images/' | absolute_url }}" />
-{% else %}
 <meta property="og:image" content="{{ '/assets/images/opengraph.jpg' | absolute_url }}" />
-{% endif %}
