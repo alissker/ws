@@ -2,18 +2,18 @@
 title: WS
 lang: pt
 description: >
-  Initial settings and styles used in most os my projects with Jekyll in a simple repository.
+  O Grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente desse setor procura.
 brand: "#c29d52"
 
 # Contact
 twitter: arthrfrts
 github: arthrfrts
-email: email@arthr.me
+email: contato@wsgroup.com.br
 
 # Build settings
 markdown: kramdown
-baseurl: "/ws"
-url: "https://arthr.me"
+baseurl: ""
+url: "https://arthr.me/ws"
 
 gems:
   - jekyll-sitemap
