@@ -3,6 +3,16 @@ body {
   background-color: $color-background;
 }
 
+::selection {
+  color: $color-background;
+  background-color: $color-accent;
+}
+
+::-moz-selection {
+  color: $color-background;
+  background-color: $color-accent;
+}
+
 p, ul, ol, dl,
 blockquote, pre,
 table, address, figure,

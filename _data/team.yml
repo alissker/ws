@@ -1,27 +1,27 @@
-- name: Martin Wayhs
+- name: Martin Bruno Simões Pires Wayhs
   portrait: male.png
-  description: Descrição da pessoa.
+  description: Arquiteto, UFRGS/RS.
 
 - name: Dilson Stein
   portrait: male.png
-  description: Descrição da pessoa.
+  description: Empresário
 
 - name: Simone Stein
   portrait: female.png
-  description: Descrição da pessoa.
+  description: Empresária.
 
 - name: Rodrigo Wayhs
   portrait: male.png
-  description: Descrição da pessoa.
+  description: Arquiteto e Urbanista, Unicruz/RS.
 
 - name: Rayanne Goi Scarton
   portrait: female.png
-  description: Descrição da pessoa.
+  description: Engenheira Civil, Unijuí/RS.
 
 - name: Liara Foletto
   portrait: female.png
-  description: Descrição da pessoa.
+  description: Arquiteta, LSBU/RU.
 
 - name: Rafaela Noll
   portrait: female.png
-  description: Descrição da pessoa.
+  description: Arquitetura e Urbanismo, UFPel/RS.

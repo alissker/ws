@@ -1,3 +1,5 @@
+document.getElementById("default_open").click();
+
 function open_portfolio(evt, target) {
   if(evt.currentTarget.classList.contains('active')) {
     document.getElementById(target).style.display = "none"

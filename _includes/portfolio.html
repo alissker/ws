@@ -4,7 +4,7 @@
     <ul>
       {% assign projects = site.data.portfolio | where: 'region','sc' %}
       {% for project in projects %}
-      <li><a onclick="open_portfolio(event, '{{ project.id }}'); document.querySelector('#{{ project.id }}').scrollIntoView({ behavior: 'smooth' });" href="javascript:void(0)">{{ project.name }}</a></li>
+      <li><a onclick="open_portfolio(event, '{{ project.id }}'); document.querySelector('#{{ project.id }}').scrollIntoView({ behavior: 'smooth' });" href="javascript:void(0)" {% if forloop.index == 1 %}id="default_open"{% endif %}>{{ project.name }}</a></li>
       {% endfor %}
     </ul>
   </div>
@@ -12,7 +12,7 @@
   <div class="region">
     <h2>Rio Grande do Sul</h2>
     <ul>
-      {% assign projects = site.data.portfolio | where: 'region','rs' %}
+      {% assign projects = site.data.portfolio | where: 'region','rs' | sort: "id" %}
       {% for project in projects %}
       <li><a onclick="open_portfolio(event, '{{ project.id }}'); document.querySelector('#{{ project.id }}').scrollIntoView({ behavior: 'smooth' });" href="javascript:void(0)">{{ project.name }}</a></li>
       {% endfor %}
