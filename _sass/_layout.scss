@@ -168,6 +168,7 @@ body {
   .page-block-main-content {
     column-count: 2;
     column-fill: balance;
+    margin-bottom: $spacing-unit;
 
     p {
       -webkit-column-break-inside: avoid;
