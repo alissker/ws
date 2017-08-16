@@ -13,7 +13,7 @@ email: contato@wsgroup.com.br
 # Build settings
 markdown: kramdown
 baseurl: ""
-url: "https://arthr.me/ws"
+url: "http://groupws.com.br"
 
 gems:
   - jekyll-sitemap
