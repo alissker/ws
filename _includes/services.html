@@ -6,8 +6,8 @@
     <h3>{{ service.name }}</h3>
     <p>{{ service.description }}
   </figcaption>
-  
-  <button class="close-tab" aria-disabled="true" onclick="this.parentElement.style.display='none'">
+
+  <button class="close-tab" onclick="this.parentElement.style.display='none'">
     <svg>
       <title>Fechar</title>
       <use xlink:href="{{ '#x' | prepend: '/assets/sprite.svg' | relative_url }}" />
