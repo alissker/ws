@@ -69,84 +69,26 @@ body {
   }
 
   .site-navigation {
-    float: right;
-    text-align: right;
-    position: relative;
-
-    #nav-trigger {
-      display: none;
-    }
-
-    @media screen and (min-width: $on-palm) {
-      .menu-trigger {
-        display: none;
-      }
-
-      .site-menu {
-        display: block;
-        margin-bottom: 0;
-        font-size: $base-font-size * 0.75;
-
-        li {
-          display: inline-block;
-          line-height: 3.6rem;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-
-          &:not(:last-child) {
-            margin-right: $spacing-unit / 2;
-          }
-
-          a {
-            color: $color-background;
-            transition: color .36s ease;
-
-            &:hover,
-            &:focus {
-              color: $color-accent;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
+    text-align: center;
+    padding: $spacing-unit / 2 0;
+    font-size: $base-font-size * .9;
 
     @include media-query($on-palm) {
-      .menu-trigger {
-        svg {
-          width: auto;
-          height: 3.6rem;
-          fill: $color-background;
-          transition: fill .36s ease;
-        }
-      }
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
 
-      &:hover,
-      &:focus,
-      #nav-trigger:checked ~ .menu-trigger {
-        cursor: pointer;
+    a {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: $color-background;
+      flex: 0 0 auto;
 
-        svg {
-          fill: $color-accent;
-        }
-      }
-
-      .site-menu {
-        position: absolute;
-        right: -$spacing-unit / 2;
-        display: none;
-        background: $color-text;
-        padding: $spacing-unit / 2;
-        list-style: none;
-        line-height: 2;
-
-        li {
-          display: list-item;
-        }
-      }
-
-      #nav-trigger:checked ~ .site-menu {
-        display: block;
+      &:not(:first-child) {
+        padding-left: $spacing-unit / 2;
       }
     }
   }
@@ -195,23 +137,91 @@ body {
 
 // “WS Group” block
 .tabs {
+  height: 46rem;
   margin-left: 0;
+  position: relative;
   @extend %clearfix;
 
-  .tab-link {
-    display: block;
-    float: left;
-    width: 25%;
-    text-align: center;
+  @include media-query($on-palm) {
+    height: auto;
+  }
+
+  .logo-ws {
+    top: 10rem;
+    left: calc(50% - 10rem);
 
     @include media-query($on-palm) {
-      width: 50%;
-      margin-bottom: $spacing-unit / 2;
+      top: 0;
+      left: 0;
+      text-align: center;
     }
 
     svg {
-      width: 6.4rem;
-      height: 6.4rem;
+      height: 25rem;
+      width: 20rem;
+
+      @include media-query($on-palm) {
+        height: 15rem;
+        width: 10rem;
+      }
+    }
+  }
+
+  li {
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+
+    @include media-query($on-palm) {
+      position: static;
+
+      &.tab-link {
+        display: block;
+        float: left;
+        width: 50%;
+        margin-bottom: $spacing-unit / 2;
+        text-align: center;
+
+        img {
+          width: auto;
+          height: 4.5rem;
+        }
+      }
+    }
+
+    &.berlim {
+      top: 0;
+      left: calc(50% - (19.8rem / 2));
+
+      @include media-query($on-palm) {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    &.mwa {
+      top: 17rem;
+      right: 12rem;
+    }
+
+    &.ilumion {
+      top: 37rem;
+      right: 15rem;
+    }
+
+    &.design {
+      top: 37rem;
+      left: 15rem;
+    }
+
+    &.invest {
+      top: 17rem;
+      left: 7rem;
+    }
+
+    img {
+      height: 7rem;
+      width: auto;
     }
   }
 }
@@ -269,6 +279,10 @@ body {
       cursor: pointer;
 
       svg {
+        width: 1.2rem;
+        height: 1.6rem;
+        fill: $color-accent;
+        
         polygon {
           fill: $color-accent;
         }
@@ -524,6 +538,7 @@ body {
         height: $base-font-size;
         vertical-align: -.2rem;
         fill: $color-accent;
+        width: 3rem;
       }
 
       span {

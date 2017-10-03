@@ -31,8 +31,20 @@
     {% endfor %}
   </figure>
 
-  <a class="slideshow-navigation previous-slide" onclick="nav_slides('{{ project.id }}', -1)" href="javascript:void(0)">{% include svg/chevron-left.svg %}</a>
-  <a class="slideshow-navigation next-slide" onclick="nav_slides('{{ project.id }}', 1)" href="javascript:void(0)">{% include svg/chevron-right.svg %}</a>
+  <a class="slideshow-navigation previous-slide" onclick="nav_slides('{{ project.id }}', -1)" href="javascript:void(0)">
+    <svg>
+      <title>Anterior</title>
+      <desc>Voltar um slide</desc>
+      <use xlink:href="{{ '#chevron-left' | prepend: '/assets/sprite.svg' | relative_url }}" />
+    </svg>
+  </a>
+  <a class="slideshow-navigation next-slide" onclick="nav_slides('{{ project.id }}', 1)" href="javascript:void(0)">
+    <svg>
+      <title>Próximo</title>
+      <desc>Avançar um slide</desc>
+      <use xlink:href="{{ '#chevron-right' | prepend: '/assets/sprite.svg' | relative_url }}" />
+    </svg>
+  </a>
 
   <div class="slideshow-pagination">
     {% for image in project.images %}

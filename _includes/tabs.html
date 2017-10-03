@@ -1,7 +1,17 @@
 <ul class="tabs">
+  <li class="logo-ws">
+    <a href="{{ site.url | absolute_url }}">
+      <svg>
+        <title>WS</title>
+        <desc>W e S estilizados formando o logo da empresa.</desc>
+        <use xlink:href="{{ '#logo' | prepend: '/assets/sprite.svg' | relative_url }}" />
+      </svg>
+    </a>
+  </li>
+  
 {% for tab in site.data.services %}
-  <li class="tab-link">
-    <a href="javascript:void(0)" onclick="open_tab(event, '{{ tab.id }}')" aria-label="{{ tab.name }}">{% include svg/{{ tab.icon }}.svg %}</a>
+  <li class="tab-link {{ tab.id }}">
+    <a href="javascript:void(0)" onclick="open_tab(event, '{{ tab.id }}')"><img src="{{ tab.id | append: '.png' | prepend: '/assets/images/logo-' | relative_url }}" alt="{{ tab.name }}" /></a>
   </li>
 {% endfor %}
 </ul>

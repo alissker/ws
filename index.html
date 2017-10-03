@@ -1,26 +1,16 @@
 ---
 layout: default
 ---
-<iframe class="jumbo-video" src="https://player.vimeo.com/video/55140149?portrait=0&byline=0&title=0" allowfullscreen></iframe>
 
 <section id="sobre" class="page-block site-container">
-  <h1>WS Group</h1>
-
-  <div class="page-block-main-content">
-    <p>O Grupo WS, fundado em 2017, é um projeto moderno e sofisticado que nasce com uma nova proposta de trabalho, atender a várias necessidades de seus clientes de forma inovadora, criativa e eficaz.</p>
-    <p>Para que isso fosse possível, uniu quatro das melhores e mais conceituadas empresas do setor Arquitetura &amp; Consultoria Imobiliária: <em>WS Invest</em>, <em>Martin Wayhs Arquitetura</em>, <em>WS Design</em> e <em>Ilumion</em>.</p>
-    <p>Oferece, em cada uma das empresas, diferentes soluções para seus clientes, a fim de proporcionar um serviço eficiente, qualificado e completo.</p>
-    <p>Cada empresa é independente, por isso os serviços podem ser contratados separadamente; mas também somos um grupo, então você pode adquirir o pacote completo — tudo depende de sua necessidade.</p>
-    <p>Com sede em Balneário Camboriú/SC, o Grupo WS conta com equipe formada por profissionais altamente capacitados, focados no cenário e nos anseios de seus clientes.</p>
-  </div>
-
-  <h2>Conheça as empresas do grupo:</h2>
-
   {% include tabs.html %}
+
   <div class="tab-container">
       {% include services.html %}
   </div>
 </section>
+
+<iframe class="jumbo-video" src="https://player.vimeo.com/video/55140149?portrait=0&byline=0&title=0" allowfullscreen></iframe>
 
 <section id="portfolio" class="page-block site-container">
   <h1>Portfólio</h1>
@@ -64,17 +54,37 @@ layout: default
 
     <h2>Siga-nos:</h2>
     <ul class="social-links">
-      <li aria-label="Facebook">
-        <a href="https://www.facebook.com/">{% include svg/facebook.svg %}</a>
+      <li>
+        <a href="https://www.facebook.com/">
+          <svg>
+            <title>Facebook</title>
+            <use xlink:href="{{ '#facebook' | prepend: '/assets/sprite.svg' | relative_url }}" />
+          </svg>
+        </a>
       </li>
-      <li aria-label="Twitter">
-        <a href="https://twitter.com/">{% include svg/twitter.svg %}</a>
+      <li>
+        <a href="https://twitter.com/">
+          <svg>
+            <title>Twitter</title>
+            <use xlink:href="{{ '#twitter' | prepend: '/assets/sprite.svg' | relative_url }}" />
+          </svg>
+        </a>
       </li>
-      <li aria-label="Tumblr">
-        <a href="https://tumblr.com/">{% include svg/tumblr.svg %}</a>
+      <li>
+        <a href="https://tumblr.com/">
+          <svg>
+            <title>Tumblr</title>
+            <use xlink:href="{{ '#tumblr' | prepend: '/assets/sprite.svg' | relative_url }}" />
+          </svg>
+        </a>
       </li>
-      <li aria-label="LinkedIn">
-        <a href="https://www.linkedin.com/">{% include svg/linkedin.svg %}</a>
+      <li>
+        <a href="https://www.linkedin.com/">
+          <svg>
+            <title>LinkedIn</title>
+            <use xlink:href="{{ '#linkedin' | prepend: '/assets/sprite.svg' | relative_url }}" />
+          </svg>
+        </a>
       </li>
     </ul>
   </div>

@@ -1,4 +1,11 @@
 <footer class="site-footer inverted">
   <p>&copy; 2017 — W/S Group. Todos os direitos reservados.</p>
-  <p class="credits">Site feito pelo <a aria-label="Arthur"  href="https://arthr.me/" title="Desenvolvedor front-end e consultor WordPress" rel="author">{% include svg/arthr.svg %} <span>Arthur Freitas</span></a>.</p>
+  <p class="credits">Site feito pelo
+    <a aria-label="Arthur"  href="https://arthr.me/" title="Desenvolvedor front-end e consultor WordPress" rel="author">
+      <svg>
+        <title>Arthur Freitas</title>
+        <desc>Desenvolvedor front-end e consultor WordPress.</desc>
+        <use xlink:href="{{ '#arthr' | prepend: '/assets/sprite.svg' | relative_url }}" />
+      </svg>
+    </a>.</p>
 </footer>

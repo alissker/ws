@@ -1,0 +1,17 @@
+---
+# Hello, Jekyll!
+---
+
+<svg xmlns="http://www.w3.org/2000/svg">
+  {% include svg/arthr.svg %}
+  {% include svg/logo.svg %}
+
+  {% include svg/chevron-left.svg %}
+  {% include svg/chevron-right.svg %}
+  {% include svg/x.svg %}
+
+  {% include svg/facebook.svg %}
+  {% include svg/linkedin.svg %}
+  {% include svg/tumblr.svg %}
+  {% include svg/twitter.svg %}
+</svg>
