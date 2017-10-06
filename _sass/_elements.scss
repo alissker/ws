@@ -1,6 +1,16 @@
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   background-color: $color-background;
+  background-image: url("images/organic.png");
+  background-repeat: repeat;
+}
+
+.mobile-only {
+  display: none;
+
+  @include media-query($on-palm) {
+    display: inherit;
+  }
 }
 
 ::selection {

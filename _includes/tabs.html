@@ -1,3 +1,4 @@
+<h4 class="mobile-only">&larr; Conheça as empresas: &rarr;</h4>
 <ul class="tabs">
   <li class="logo-ws">
     <a href="{{ site.url | absolute_url }}">
@@ -8,7 +9,7 @@
       </svg>
     </a>
   </li>
-  
+
 {% for tab in site.data.services %}
   <li class="tab-link {{ tab.id }}">
     <a href="javascript:void(0)" onclick="open_tab(event, '{{ tab.id }}')"><img src="{{ tab.id | append: '.png' | prepend: '/assets/images/logo-' | relative_url }}" alt="{{ tab.name }}" /></a>

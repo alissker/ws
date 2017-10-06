@@ -1,6 +1,8 @@
-- name: Berlim ambientes
-  id: berlim
-  description: Descrição da empresa
+- name: Martin Wayhs Arquitetura
+  id: mwa
+  description: Desenvolvemos projetos arquitetônicos e projeto de interiores.
+  image: arquitect.jpg
+  icon: home
 
 - name: WS Invest
   id: invest
@@ -8,17 +10,15 @@
   image: invest.jpg
   icon: building
 
-- name: Martin Wayhs Arquitetura
-  id: mwa
-  description: Desenvolvemos projetos arquitetônicos e projeto de interiores.
-  image: arquitect.jpg
-  icon: home
-
 - name: WS Design
   id: design
   description: Temos a nossa própria marca de móveis sob medida. Desenvolvemos um projeto exclusivo para você.
   image: design.jpg
   icon: furniture
+
+- name: Berlim Ambientes
+  id: berlim
+  description: Descrição da empresa
 
 - name: Ilumion
   id: ilumion

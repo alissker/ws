@@ -8,10 +8,9 @@
 
   {% include svg/chevron-left.svg %}
   {% include svg/chevron-right.svg %}
+  {% include svg/three-bars.svg %}
   {% include svg/x.svg %}
 
   {% include svg/facebook.svg %}
-  {% include svg/linkedin.svg %}
-  {% include svg/tumblr.svg %}
-  {% include svg/twitter.svg %}
+  {% include svg/instagram.svg %}
 </svg>
