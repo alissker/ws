@@ -2,13 +2,13 @@
 title: WS
 lang: pt
 description: >
-  O Grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente desse setor procura.
+  O Grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente procura no setor de arquitetura.
 brand: "#c29d52"
 
 # Contact
 twitter: arthrfrts
 github: arthrfrts
-email: contato@wsgroup.com.br
+email: contato@groupws.com.br
 
 # Build settings
 markdown: kramdown

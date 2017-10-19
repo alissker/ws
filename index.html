@@ -22,16 +22,11 @@ layout: default
   <h1>Profissionais</h1>
 
   <div class="team-members col-4">
-    {% for member in site.data.team limit: 4 %}
+    {% for member in site.data.team %}
     {% include member.html %}
     {% endfor %}
   </div>
-
-  <div class="team-members col-3">
-    {% for member in site.data.team offset: 4 %}
-    {% include member.html %}
-    {% endfor %}
-  </div>
+  <p class="mobile-only caption">&larr; Conheça a equipe &rarr;</p>
 </section>
 
 <section id="contato" class="page-block inverted">
