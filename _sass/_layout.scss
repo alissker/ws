@@ -533,12 +533,6 @@ h4 {
     margin-bottom: 0;
   }
 
-  @include media-query($on-palm) {
-    max-width: calc(#{100%} + (#{$spacing-unit} * 2));
-    margin-left: -($spacing-unit);
-    margin-right: -($spacing-unit);
-  }
-
   h2 {
     padding-top: $spacing-unit;
     margin-bottom: $spacing-unit / 2;
