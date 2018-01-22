@@ -9,10 +9,8 @@
 - id: camboriu
   name: Balneário Camboriú
   region: sc
-  images:
-    - portfolio4.jpg
-    - portfolio5.jpg
-    - portfolio6.jpg
+  iframe: '<iframe width="700" height="500" src="https://my.matterport.com/show/?m=WmrC2PSC4ha" frameborder="0" allowfullscreen></iframe>'
+
 
 - id: catuipe
   name: Catuípe

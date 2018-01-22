@@ -25,6 +25,7 @@
 <div id="{{ project.id }}" class="slideshow-container">
   <h2>{{ project.name }}</h2>
 
+  {% if project.images %}
   <figure class="slideshow">
     {% for image in project.images %}
     <img class="slide fade" src="{{ image | prepend: '/assets/media/' | relative_url }}" alt="" />
@@ -51,5 +52,9 @@
     <span class="dot" onclick="goto_slide('{{ project.id }}', {{ forloop.index }})"></span>
     {% endfor %}
   </div>
+  {% endif %}
+  {% if project.iframe %}
+  {{ project.iframe }}
+  {% endif %}
 </div>
 {% endfor %}

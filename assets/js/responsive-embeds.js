@@ -39,7 +39,7 @@ function _debounce(func, wait, immediate) {
 }
 
 var iframes = document.getElementsByTagName('iframe');
-var isVideo = /(youtube)|(vimeo)|(spotify)/i;
+var isVideo = /(youtube)|(matterpost)|(vimeo)/i;
 var videos  = _filter(iframes, function(iframe) {
   return isVideo.test(iframe.getAttribute('src'));
 });
