@@ -3,6 +3,8 @@
 
   <figcaption>
     <p><strong>{{ member.name }}</strong><br />
-      {{ member.description }}</p>
+      {{ member.description }}<br />
+      <a href="{{ member.phone | prepend: '+55' }}">{{ member.phone }}</a><br />
+      <a href="{{ mail.email | prepend: 'mailto:' }}">{{ member.email }}</a></p>
   </figcaption>
 </figure>

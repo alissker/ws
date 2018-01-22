@@ -1,27 +1,65 @@
-- name: Martin Bruno Simões Pires Wayhs
-  portrait: male.png
-  description: Arquiteto, UFRGS/RS.
-
-- name: Dilson Stein
-  portrait: male.png
-  description: Empresário
-
-- name: Simone Stein
-  portrait: female.png
-  description: Empresária.
-
-- name: Rodrigo Wayhs
-  portrait: male.png
-  description: Arquiteto e Urbanista, Unicruz/RS.
-
 - name: Rayanne Goi Scarton
   portrait: female.png
-  description: Engenheira Civil, Unijuí/RS.
+  description: Engenheira Civil - COO
+  email: ray@groupws.com.br
+  phone: (47) 999-495-171
 
-- name: Liara Foletto
+- name: Rodrigo de Andrade Wayhs
+  portrait: male.png
+  description: Arquiteto e Urbanista - CEO
+  email: rodrigo@groupws.com.br
+  phone: (47) 999-882-778
+
+- name: Paulo César Azambuja
+  portrait: male.png
+  description: Gerente Comercial
+  email: azambuja@groupws.com.br
+  phone: (47) 999-933-950
+
+- name: José Fernandes
+  portrait: male.png
+  description: Arquiteto e Urbanista
+  email: josefernandes@groupws.com.br
+  phone: (48) 999-457-309
+
+- name: Pâmela Biernaski
   portrait: female.png
-  description: Arquiteta, LSBU/RU.
+  description: Arquiteta e Urbanista
+  email: pamela@groupws.com.br
+  phone: (47) 996-320-099
+
+- name: Nayara Borba
+  portrait: female.png
+  description: Designer de Interiores
+  email: nayaraborba@groupws.com.br
+  phone: (47) 999-315-018
+
+- name: Vagner Castro
+  portrait: male.png
+  description: Engenheiro Civil
+  email: nayaraborba@groupws.com.br
+  phone: (47) 991-794-566
+
+- name: Kelly Godois
+  portrait: female.png
+  description: Designer de interiores
+  email: kellygodois@groupws.com.br
+  phone: (47) 991-826-446
+
+- name: Rafael S. Oliveira
+  portrait: male.png
+  description: Projetista
+  email: rafael@groupws.com.br
+  phone: (47) 996-826-897
+
+- name: Leonardo Mensch
+  portrait: male.png
+  description: Financeiro
+  email: financeiro@groupws.com.br
+  phone: (47) 999-524-784
 
 - name: Rafaela Noll
   portrait: female.png
-  description: Arquitetura e Urbanismo, UFPel/RS.
+  description: Arquiteta e Urbanista
+  email: rafaela@groupws.com.br
+  phone: (55) 981-189-912
