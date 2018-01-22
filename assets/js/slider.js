@@ -25,10 +25,6 @@ function show_slides(id, n) {
     slides[i].style.display = "none";
   }
 
-  for(i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
   slides[slide_index-1].style.display = "block";
   dots[slide_index-1].className += " active";
 }

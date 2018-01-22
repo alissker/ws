@@ -502,6 +502,10 @@ h4 {
           max-width: 50%;
           float: left;
         }
+
+        a {
+          cursor: pointer;
+        }
       }
     }
 
@@ -524,15 +528,13 @@ h4 {
   margin: 0 auto;
   background: $color-text;
   color: $color-background;
-  display: none;
-  padding: 0 $spacing-unit / 2;
 
   .slideshow {
     margin-bottom: 0;
   }
 
   @include media-query($on-palm) {
-    max-width: calc(100% + (#{$spacing-unit} * 2));
+    max-width: calc(#{100%} + (#{$spacing-unit} * 2));
     margin-left: -($spacing-unit);
     margin-right: -($spacing-unit);
   }
