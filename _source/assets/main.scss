@@ -1,0 +1,22 @@
+---
+# Hello, Jekyll!
+---
+
+$font-family-main: muli, sans-serif;
+$font-size-base: 1.4rem;
+$font-line-height: 1.5;
+$font-weight-base: 300;
+
+$color-text: #2b292b;
+$color-background: #f5f2ed;
+$color-accent: #c29d52;
+$color-grey: lighten($color-text, 40%);
+
+$content-width: 960px;
+$on-palm: 600px;
+
+@import "mixins",
+        "fonts",
+        "reset",
+        "elements",
+        "layout";

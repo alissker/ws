@@ -1,0 +1,27 @@
+<header class="masthead">
+  <nav class="social-links">
+    <a rel="external" href="{{ site.facebook | prepend: 'https://www.facebook.com/' }}">
+      {% include elements/symbol.svg id="facebook" title="Facebook" desc="Logo do Facebook" %}
+    </a>
+    <a rel="external" href="{{ site.instagram | prepend: 'https://www.instagram.com/' }}">
+      {% include elements/symbol.svg id="instagram" title="Instagram" desc="Logo do Instagram" %}
+    </a>
+  </nav>
+
+  <a class="site-title" href="{{ site.url }}">
+    {% include elements/symbol.svg id="ws" title="WS Group" %}
+  </a>
+
+  <nav class="main-menu">
+    <input type="checkbox" id="nav-trigger" />
+    <label for="nav-trigger">
+      {% include elements/symbol.svg id="three-bars" title="Menu" %}
+    </label>
+
+    <div class="trigger">
+      {% for section in site.sections %}
+        <a href="{{ section.title | slugify | prepend: '#' }}">{{ slugify.title }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</header>

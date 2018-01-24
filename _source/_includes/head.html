@@ -1,0 +1,12 @@
+<head>
+  <meta charset="utf-8" />
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description | strip_html | strip_newlines | normalize_whitespace }}" />
+
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | relative_url }}" />
+  <link rel="author" type="text/plain" href="{{ '/humans.txt' | absolute_url }}" title="The humans responsible and technologic colophon." />
+
+  {% include parts/ogp.html %}
+  {% include parts/favicons.html %}
+</head>
