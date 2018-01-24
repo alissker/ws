@@ -4,7 +4,7 @@
 
   <div class="regions site-container">
     <div class="region">
-      <h2>Balneário Camburiú</h2>
+      <p><strong>Balneário Camburiú</strong></p>
       <ul>
         <li><a id="default_open" onclick="open_portfolio(event, 'tour'); document.querySelector('#tour').scrollIntoView({behavior: 'smooth'})">Tour Virtual</a></li>
         <li><a onclick="open_portfolio(event, 'gallery'); document.querySelector('#gallery').scrollIntoView({behavior: 'smooth'})">Galeria de imagens</a></li>
@@ -17,13 +17,13 @@
   </div>
 
   <div id="gallery" class="slideshow-container jumbo-video">
-    <figure class="slideshow">
+    <figure class="slideshow gallery">
     {% for i in (1..20) %}
       <img class="slide fade" src="{{ i | prepend: '/assets/media/camboriu/camboriu' | append: '.jpg' | relative_url }}" alt="" />
     {% endfor %}
     </figure>
 
-    <a class="slideshow-navigation previous-slide" onclick="nav_slides('gallery', -1)" href="javascript:void(0)">
+    <a class="slideshow-navigation previous-slide prev" href="javascript:void(0)">
       <svg>
         <title>Anterior</title>
         <desc>Voltar um slide</desc>
@@ -31,7 +31,7 @@
       </svg>
     </a>
 
-    <a class="slideshow-navigation next-slide" onclick="nav_slides('gallery', 1)" href="javascript:void(0)">
+    <a class="slideshow-navigation next-slide next" href="javascript:void(0)">
       <svg>
         <title>Próximo</title>
         <desc>Avançar um slide</desc>

@@ -531,44 +531,7 @@ h4 {
 
   .slideshow {
     margin-bottom: 0;
-  }
-
-  h2 {
-    padding-top: $spacing-unit;
-    margin-bottom: $spacing-unit / 2;
-  }
-
-  .slide {
-    &:not(:first-child) {
-      display: none;
-    }
-
-    &.fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-  }
-
-  .slideshow-pagination {
-    text-align: center;
-    padding-bottom: $spacing-unit / 2;
-
-    .dot {
-      cursor: pointer;
-      height: .6rem;
-      width: .6rem;
-      background-color: $color-background;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color .36s ease;
-
-      &.active,
-      &:hover,
-      &:focus {
-        outline: none;
-        background-color: $color-accent;
-      }
-    }
+    height: 100%;
   }
 
   .slideshow-navigation {
