@@ -1,13 +1,11 @@
 # Site settings
-title: WS
+title: WS Group
 lang: pt
 description: >
-  O Grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente procura no setor de arquitetura.
+  Grupo de empresas criado com o objetivo de atender várias das necessidades que um cliente procura no setor de arquitetura.
 brand: "#c29d52"
 
 # Contact
-twitter: arthrfrts
-github: arthrfrts
 email: contato@groupws.com.br
 
 # Build settings
@@ -15,8 +13,11 @@ markdown: kramdown
 baseurl: ""
 url: "http://groupws.com.br"
 
-gems:
+source: _source
+
+plugins:
   - jekyll-sitemap
+  - jekyll-coffeescript
 exclude:
   - README.md
   - Gemfile
