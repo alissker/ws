@@ -19,8 +19,11 @@
     </label>
 
     <div class="trigger">
-      {% for section in site.sections %}
-        <a href="{{ section.title | slugify | prepend: '#' }}">{{ slugify.title }}</a>
+      {% assign sections = site.sections | sort: 'order' %}
+      {% for section in sections %}
+        {% if section.menu %}
+          <a href="{{ section.slug | prepend: '#' }}">{{ section.menu.label | default: section.title }}</a>
+        {% endif %}
       {% endfor %}
     </div>
   </nav>
