@@ -127,10 +127,10 @@ body {
       }
 
       label[for="nav-trigger"] {
-        height: calc(#{$font-size-base} * #{$font-line-height});
+        max-height: 2.5rem;
 
         svg {
-          height: calc(#{$font-size-base} * #{$font-line-height});
+          max-height: 2.5rem;
           max-width: calc(#{$font-size-base} * #{$font-line-height});
           vertical-align: middle;
           fill: $color-background;
@@ -170,3 +170,22 @@ body {
 /*
     Site Content
 */
+.site-content {
+  margin-top: 10.5rem;
+}
+
+/*
+    Site Footer
+*/
+.colophon {
+  background: $color-text;
+  color: $color-background;
+  text-align: center;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+
+  svg {
+    height: calc(#{$font-line-height} * #{$font-size-base});
+    width: 5.2rem;
+  }
+}
