@@ -4,6 +4,19 @@ body {
   background: $color-background;
 }
 
+.mobile-only {
+  text-align: center;
+
+  @include on-laptop {
+    @include hide;
+  }
+}
+
+// Text elements
+p, ul, ol, dl {
+  margin: $spacing-unit / 2 0 $spacing-unit;
+}
+
 // Links
 a {
   color: $color-accent;

@@ -23,6 +23,7 @@
 }
 
 %container {
+  width: 100%;
   max-width: $content-width;
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;
@@ -35,4 +36,13 @@
   }
 
   @extend %clearfix;
+}
+
+@mixin hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
 }

@@ -1,6 +1,27 @@
 ---
 order: 1
+title: ""
+class: wrapper
 menu:
   order: 1
   label: O Grupo
 ---
+
+<p class="mobile-only"><strong>&larr; Conheça as empresas: &rarr;</strong></p>
+
+<ul class="group-logos">
+  <li id="ws-group" class="company-logo">
+    <a href="{{ site.url }}">
+      {% include elements/symbol.svg id="ws" title="WS Group" %}
+    </a>
+  </li>
+
+  {% for company in site.data.companies %}
+  {% assign ctitle = company[0] %}
+  <li id="{{ company[0] }}" class="company-logo">
+    <a href="javascript:void(0)">
+      <img src="{{ company[0] | prepend: '/assets/images/companies/logos/' | append: '.png' | relative_url }}" alt="{{ site.data.companies[ctitle].title | inspect }}" />
+    </a>
+  </li>
+  {% endfor %}
+</ul>

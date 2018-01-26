@@ -19,6 +19,7 @@ body {
     right: 0;
     height: $spacing-unit / 4;
     background-color: $color-text;
+    z-index: 2;
   }
 
   &:before {
@@ -49,10 +50,12 @@ body {
 .masthead {
   background: $color-text;
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   text-align: center;
   padding: $spacing-unit $spacing-unit / 2;
+  z-index: 2;
 
   .social-links {
     position: absolute;
@@ -172,6 +175,110 @@ body {
 */
 .site-content {
   margin-top: 10.5rem;
+  display: flex;
+  flex-flow: column wrap;
+
+  .page-section {
+    padding-top: $spacing-unit * 2;
+    padding-bottom: $spacing-unit * 2;
+
+    @include on-laptop {
+      height: calc(#{100vh} - #{$spacing-unit * 4});
+    }
+  }
+}
+
+// About Block
+.group-logos {
+  position: relative;
+
+  #ws-group {
+    svg {
+      fill: $color-text;
+    }
+  }
+
+  @include on-laptop {
+    height: 46rem;
+    margin-left: 0;
+
+    .company-logo {
+      position: absolute;
+      z-index: 1;
+
+      img {
+        width: auto;
+        height: 7rem;
+      }
+
+      &#ws-group {
+        top: 10rem;
+        left: calc(#{50%} - #{10rem});
+
+        svg {
+          height: 25rem;
+          width: 20rem;
+        }
+      }
+
+      &#mwa {
+        top: 0;
+        left: calc(#{50%} - (#{8.5rem} / #{2}));
+
+        img {
+          height: 8rem;
+        }
+      }
+
+      &#invest {
+        top: 17rem;
+        left: 7rem;
+      }
+
+      &#design {
+        top: 17rem;
+        right: 7rem;
+      }
+
+      &#berlim {
+        top: 37rem;
+        left: 12rem;
+      }
+
+      &#ilumion {
+        top: 37rem;
+        right: 14rem;
+      }
+    }
+  }
+
+  @include on-palm {
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    margin-left: -($spacing-unit / 2);
+    margin-right: -($spacing-unit / 2);
+
+    .company-logo {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: $color-background;
+      flex: 0 0 auto;
+      padding: 0 $spacing-unit;
+
+      img {
+        height: 7rem;
+        width: auto;
+      }
+
+      &#ws-group {
+        display: none;
+      }
+    }
+  }
 }
 
 /*
