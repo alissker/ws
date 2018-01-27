@@ -37,5 +37,3 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-
-theme: jekyll-theme-slate
