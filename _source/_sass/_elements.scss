@@ -18,10 +18,12 @@ p, ul, ol, dl {
 }
 
 // Links
-a {
+a,
+a:visited {
   color: $color-accent;
   transition: color .25s ease;
   text-decoration: none;
+  cursor: pointer;
 
   svg {
     fill: $color-background;
@@ -33,6 +35,23 @@ a {
     svg {
       fill: $color-accent;
     }
+  }
+}
+
+// Headings
+h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: $spacing-unit;
+  font-size: calc(#{$font-size-base} * 1.5);
+  text-align: center;
+}
+
+// Lists
+dl {
+  dt {
+    font-weight: 800;
   }
 }
 
