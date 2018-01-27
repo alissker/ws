@@ -12,6 +12,7 @@ instagram: group_ws
 collections:
   sections:
     output: false
+    title: false
   svg:
     output: false
 
@@ -21,6 +22,13 @@ baseurl: ""
 url: "http://groupws.com.br"
 
 source: _source
+
+defaults:
+  - scope:
+      path: ""
+      type: sections
+    values:
+      title: nil
 
 plugins:
   - jekyll-sitemap

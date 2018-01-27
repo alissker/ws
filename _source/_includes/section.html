@@ -1,7 +1,7 @@
 <section id="{{ section.slug }}" class="page-section {% if section.class %}{{ section.class }}{% endif %}">
-  {% if section.title %}
-  <h2 class="section-title">{{ section.title }}</h2>
-  {% endif %}
+  {% unless section.title == "nil" %}
+  <h2 class="section-title wrapper">{{ section.title }}</h2>
+  {% endunless %}
 
   <div class="section-content">
     {{ section.content }}

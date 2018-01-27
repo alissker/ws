@@ -6,8 +6,6 @@ body {
   border-right: $spacing-unit / 4 solid $color-text;
   padding-top: $spacing-unit / 4;
   padding-bottom: $spacing-unit / 4;
-  display: flex;
-  flex-flow: column wrap;
 
   &:before,
   &:after {
@@ -28,15 +26,6 @@ body {
 
   &:after {
     bottom: 0;
-  }
-
-  .masthead,
-  .colphon {
-    flex: 0 0 auto;
-  }
-
-  .site-content {
-    flex: 1 0 auto;
   }
 }
 
@@ -181,10 +170,6 @@ body {
   .page-section {
     padding-top: $spacing-unit * 2;
     padding-bottom: $spacing-unit * 2;
-
-    @include on-laptop {
-      height: calc(#{100vh} - #{$spacing-unit * 4});
-    }
   }
 }
 
@@ -256,7 +241,7 @@ body {
     height: auto;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     margin-left: -($spacing-unit / 2);

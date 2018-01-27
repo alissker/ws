@@ -24,13 +24,14 @@
 
 %container {
   width: 100%;
-  max-width: $content-width;
-  padding-left: $spacing-unit;
-  padding-right: $spacing-unit;
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-left: auto;
   margin-right: auto;
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
 
   @include on-palm {
+    max-width: calc(#{$content-width} - #{$spacing-unit});
     padding-left: $spacing-unit / 2;
     padding-right: $spacing-unit / 2;
   }
