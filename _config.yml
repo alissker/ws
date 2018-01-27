@@ -22,6 +22,7 @@ baseurl: ""
 url: "http://groupws.com.br"
 
 source: _source
+destination: _site
 
 defaults:
   - scope:
