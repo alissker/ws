@@ -282,6 +282,34 @@ body {
   }
 }
 
+.company-info {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+
+  .company-inner {
+    width: 100%;
+    max-width: $palm-width;
+    margin: $spacing-unit * 2 auto;
+    text-align: center;
+    padding: $spacing-unit * 2;
+    background: rgba($color-text, .4);
+    box-shadow: 0 0 1.6rem rgba($color-text, .7);
+    color: $color-background;
+  }
+
+  .close-box {
+    position: absolute;
+
+    svg {
+      width: 3.2rem;
+      max-height: 3.2rem;
+    }
+  }
+}
+
 // Portfolio Block
 .project {
   text-align: center;

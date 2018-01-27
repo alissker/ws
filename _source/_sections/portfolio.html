@@ -9,7 +9,7 @@ menu: true
 <dl id="{{ projname }}" class="project wrapper">
   <dt>{{ site.data.projects[projname].city }} / {{ site.data.projects[projname].region | upcase }}
   </dt>
-  <dd>{% if site.data.projects[projname].tour %}<a class="tour-link" target="{{ projname | prepend: '#tour-' }}">Tour virtual</a> / {% endif %} <a class="gallery-link" target="{{ projname | prepend: '#gallery-' }}">Galeria de imagens</a>
+  <dd>{% if site.data.projects[projname].tour %}<a class="tour-link" data-target="{{ projname | prepend: '#tour-' }}">Tour virtual</a> / {% endif %} <a class="gallery-link" data-target="{{ projname | prepend: '#gallery-' }}">Galeria de imagens</a>
 </dl>
 
 {% if site.data.projects[projname].tour %}

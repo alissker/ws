@@ -10,7 +10,7 @@ hide_projects = ->
 
 $('.project-gallery').hide()
 $('.gallery-link').click ->
-  target = $(this).attr('target')
+  target = $(this).attr('data-target')
   if $(target).hasClass('active-gallery')
     return
   else
@@ -27,7 +27,7 @@ $('.gallery-link').click ->
       nextArrow: '<button class="slider-next slider-nav"><svg><use xlink:href="/assets/sprite.svg#chevron-right" /></svg>'
   return
 $('.tour-link').click ->
-  target = $(this).attr('target')
+  target = $(this).attr('data-target')
   if $(target).hasClass('active-tour')
     return
   else
