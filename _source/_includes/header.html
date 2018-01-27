@@ -8,7 +8,7 @@
     </a>
   </nav>
 
-  <a class="site-title" href="{{ site.url }}">
+  <a class="site-title" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });" href="javascript:void(0)">
     {% include elements/symbol.svg id="ws" title="WS Group" %}
   </a>
 
@@ -22,7 +22,7 @@
       {% assign sections = site.sections | sort: 'order' %}
       {% for section in sections %}
         {% if section.menu %}
-          <a href="{{ section.slug | prepend: '#' }}">{{ section.menu.label | default: section.title }}</a>
+          <a onclick="document.querySelector('{{ section.slug | prepend: '#' }}').scrollIntoView({ behavior: 'smooth' });" href="javascript:void(0)">{{ section.menu.label | default: section.title }}</a>
         {% endif %}
       {% endfor %}
     </div>
