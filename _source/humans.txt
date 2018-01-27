@@ -1,0 +1,59 @@
+                     ###########
+                 ################
+              ###################
+            ##############
+          #############   #####
+         ###########   #######
+        ########### ########   #
+        ##################  ####
+        ##########  #########
+          ####      #######              arthr.me
+
+# The humans responsible and technology colophon.
+
+
+THE TEAM
+--------
+
+  Arthur Freitas -- content, design and code
+  arthr.me
+
+ACKNOWLEDGMENTS
+---------------
+
+  Octicons -- vector icons from primer css
+  octicons.github.com
+
+TECHNOLOGY
+----------
+
+  Jekyll -- static site generator
+  jekyllrb.com
+
+  Sass -- css pre-processor
+  sass-lang.com
+
+  Liquid -- templating
+  shopify.github.io/liquid
+
+  Staticman -- commenting system
+  staticman.net
+
+
+TOOLS
+-----
+
+  Atom -- hackable text editor
+  atom.io
+
+  Graphic -- svg, vector editor
+  graphic.com
+
+  Forestry -- cms
+  forestry.io
+
+  Pocket Casts -- code companion
+  swiftjelly.com/pocketcasts
+
+  Github -- code collaboration and hosting
+  github.com
