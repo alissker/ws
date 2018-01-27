@@ -32,7 +32,6 @@ defaults:
       title: nil
 
 plugins:
-  - jekyll-sitemap
   - jekyll-coffeescript
 exclude:
   - README.md
