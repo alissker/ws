@@ -1,5 +1,21 @@
 ---
 title: Profissionais
+class: wrapper
 order: 4
 menu: true
 ---
+
+<div class="team">
+  {% for member in site.data.team %}
+  <figure class="member">
+    <img class="member-portrait" src="{{ member.portrait | prepend: '/assets/images/team/' | relative_url }}" alt="{{ member.name | prepend: 'Foto de ' }}" />
+
+    <figcaption class="member-information">
+      <strong>{{ member.name }}</strong><br />
+      {{ member.description }}<br />
+      <a href="{{ member.phone | prepend: 'tel:' }}">{{ member.phone }}</a><br />
+      <a href="{{ member.email | prepend: 'mailto:' }}">{{ member.email }}</a>
+    </figure>
+  </figure>
+  {% endfor %}
+</div>

@@ -1,5 +1,25 @@
 ---
 title: Contato
+class: inverted
 order: 5
 menu: true
 ---
+
+<div class="address-block wrapper">
+  <address>
+    <strong>Terceira Avenida, nº 31, sala 01</strong><br />
+    esquina com a Rua 3310<br />
+    Balneário Camboríu/SC.
+  </address>
+
+  <address>
+    <strong>Avenida do Estado, nº 2100</strong><br />
+    acesso pela Rua Uganda, sala 17<br />
+    Balneário Camboriú/SC.
+  </address>
+</div>
+
+<ul class="contact-links">
+  <li><strong>Fale conosco:</strong><br />
+    <a href="{{ site.email | prepend: 'mailto:' }}">{{ site.email }}</a></li>
+</ul>

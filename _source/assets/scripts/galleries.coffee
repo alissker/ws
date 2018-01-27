@@ -1,10 +1,10 @@
 ---
 ---
 hide_projects = ->
-  $('.active-gallery').fadeOut()
+  $('.active-gallery').slideToggle()
   $('.active-gallery').slick 'unslick'
   $('.active-gallery').removeClass 'active-gallery'
-  $('.active-tour').fadeOut()
+  $('.active-tour').slideToggle()
   $('.active-tour').removeClass 'active-tour'
   return
 
@@ -15,7 +15,7 @@ $('.gallery-link').click ->
     return
   else
     hide_projects()
-    $(target).fadeIn()
+    $(target).slideToggle()
     $(target).addClass 'active-gallery'
     $(target).slick
       dots: false
@@ -32,7 +32,7 @@ $('.tour-link').click ->
     return
   else
     hide_projects()
-    $(target).fadeIn()
+    $(target).slideToggle()
     $(target).addClass 'active-tour'
     resizeVideos()
   return

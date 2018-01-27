@@ -17,6 +17,14 @@ p, ul, ol, dl {
   margin: $spacing-unit / 2 0 $spacing-unit;
 }
 
+strong, b {
+  font-weight: 800;
+}
+
+em, i {
+  font-style: italic;
+}
+
 // Links
 a,
 a:visited {
