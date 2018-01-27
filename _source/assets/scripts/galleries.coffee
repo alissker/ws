@@ -2,13 +2,13 @@
 ---
 $('.company-link').click ->
   target = $(this).attr('data-target')
-  if $(target).hasClass('active-gallery')
+  if $(target).hasClass('active-company')
     return
   else
-    $('.active-gallery').slideToggle()
-    $('.active-gallery').removeClass 'active-gallery'
+    $('.active-company').slideToggle()
+    $('.active-company').removeClass 'active-company'
 
-    $(target).addClass 'active-gallery'
+    $(target).addClass 'active-company'
     $(target).slideToggle()
   return
 
@@ -16,7 +16,7 @@ $('.company-link').click ->
 $('.close-box').click ->
   target = $(this).attr('data-target')
   $(target).slideToggle()
-  $(target).removeClass 'active-gallery'
+  $(target).removeClass 'active-company'
   return
 
 
