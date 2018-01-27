@@ -17,7 +17,7 @@ menu:
   {% for company in site.data.companies %}
   {% assign ctitle = company[0] %}
   <li id="{{ company[0] }}" class="company-logo">
-    <a data-target="{{ ctitle | prepend: '#' }}" href="javascript:void(0)">
+    <a class="company-link" data-target="{{ ctitle | prepend: '#company-' }}" href="javascript:void(0)">
       <img src="{{ company[0] | prepend: '/assets/images/companies/logos/' | append: '.png' | relative_url }}" alt="{{ site.data.companies[ctitle].title }}" />
     </a>
   </li>
@@ -26,8 +26,8 @@ menu:
 
 {% for company in site.data.companies %}
 {% assign ctitle = company[0] %}
-<div id="{{ ctitle }}" class="company-info" style="background-image: url('{{ ctitle | prepend: 'assets/images/companies/' | append: '.jpg' | relative_url }}')">
-  <button class="close-box" data-target="{{ ctitle | prepend: '#' }}">{% include elements/symbol.svg id="x" %}</button>
+<div id="{{ ctitle | prepend: 'company-' }}" class="company-info" style="background-image: url('{{ ctitle | prepend: 'assets/images/companies/' | append: '.jpg' | relative_url }}')">
+  <button class="close-box" data-target="{{ ctitle | prepend: '#company-' }}">{% include elements/symbol.svg id="x" %}</button>
   <dl class="company-inner">
     <dt>{{ site.data.companies[ctitle].title }}</dt>
     <dd>{{ site.data.companies[ctitle].description | markdownify }}</dd>

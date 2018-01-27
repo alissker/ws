@@ -1,5 +1,25 @@
 ---
 ---
+$('.company-link').click ->
+  target = $(this).attr('data-target')
+  if $(target).hasClass('active-gallery')
+    return
+  else
+    $('.active-gallery').slideToggle()
+    $('.active-gallery').removeClass 'active-gallery'
+
+    $(target).addClass 'active-gallery'
+    $(target).slideToggle()
+  return
+
+
+$('.close-box').click ->
+  target = $(this).attr('data-target')
+  $(target).slideToggle()
+  $(target).removeClass 'active-gallery'
+  return
+
+
 hide_projects = ->
   $('.active-gallery').slideToggle()
   $('.active-gallery').slick 'unslick'

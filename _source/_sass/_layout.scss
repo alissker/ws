@@ -283,6 +283,7 @@ body {
 }
 
 .company-info {
+  display: none;
   position: relative;
   background-size: cover;
   background-position: center center;
@@ -302,10 +303,32 @@ body {
 
   .close-box {
     position: absolute;
+    top: $spacing-unit / 2;
+    right: $spacing-unit / 2;
+    background: rgba($color-background, .5);
+    transition: background .25s ease;
+    border: none;
+    border-radius: 50%;
+    line-height: 0;
+    padding: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    cursor: pointer;
 
     svg {
-      width: 3.2rem;
-      max-height: 3.2rem;
+      width: 1.6rem;
+      max-height: 1.6rem;
+      fill: $color-text;
+      transition: fill .25s ease;
+    }
+
+    &:hover,
+    &:focus {
+      background: $color-background;
+
+      svg {
+        fill: $color-accent;
+      }
     }
   }
 }
@@ -331,6 +354,7 @@ body {
     padding: 0;
     line-height: 0;
     background: rgba($color-background, .5);
+    transition: background .25s ease;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -345,6 +369,8 @@ body {
 
     &:hover,
     &:focus {
+      background: $color-background;
+
       svg {
         fill: $color-accent;
       }
