@@ -20,10 +20,6 @@ collections:
 markdown: kramdown
 baseurl: ""
 url: "http://groupws.com.br"
-permalink: pretty
-
-source: _source
-destination: _site
 
 defaults:
   - scope:
