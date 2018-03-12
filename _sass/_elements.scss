@@ -4,6 +4,14 @@ body {
   background: $color-background;
 }
 
+hr {
+  height: 0.3rem;
+  max-width: 30rem;
+  margin: $spacing-unit auto;
+  border: none;
+  background-color: $color-accent;
+}
+
 .mobile-only {
   text-align: center;
 

@@ -5,32 +5,18 @@ menu:
   label: O Grupo
 ---
 
-<p class="mobile-only"><strong>&larr; Conheça as empresas: &rarr;</strong></p>
+<p>O Grupo WS foi criado com o objetivo de atender várias das necessidades que um cliente desse setor procura.</p>
 
-<ul class="group-logos">
-  <li id="ws-group" class="company-logo">
-    <a href="{{ site.url }}">
-      {% include elements/symbol.svg id="ws" title="WS Group" %}
-    </a>
-  </li>
+<p>Por isso, nós unimos quatro empresas do setor de Arquitetura & Consultoria Imobiliária. São elas: <em>WS Invest</em>, <em>Martin Wayhs Arquitetura</em>, <em>WS Design</em> e <em>Ilumion</em>. Cada uma delas oferece um tipo de solução para o nosso cliente, afim de proporcionar um serviço eficiente, qualificado e completo.</p>
 
-  {% for company in site.data.companies %}
-  {% assign ctitle = company[0] %}
-  <li id="{{ company[0] }}" class="company-logo">
-    <a class="company-link" data-target="{{ ctitle | prepend: '#company-' }}" href="javascript:void(0)">
-      <img src="{{ company[0] | prepend: '/assets/images/companies/logos/' | append: '.png' | relative_url }}" alt="{{ site.data.companies[ctitle].title }}" />
-    </a>
-  </li>
-  {% endfor %}
+<p>Então, esse é o objetivo da WS Group: oferecer aquilo que você precisa. O que não oferecemos, auxiliaremos você a encontrar a melhor solução.</p>
+
+<hr />
+
+<p class="learn-more-label">Saiba mais</p>
+
+<ul class="company-links">
+  <li><a href="http://www.berlimambientes.com.br" target="_blank">
+    <img src="{{ '/assets/images/companies/logos/berlim.png' | relative_url }}" alt="Berlim Ambientes" />
+  </a></li>
 </ul>
-
-{% for company in site.data.companies %}
-{% assign ctitle = company[0] %}
-<div id="{{ ctitle | prepend: 'company-' }}" class="company-info" style="background-image: url('{{ ctitle | prepend: 'assets/images/companies/' | append: '.jpg' | relative_url }}')">
-  <button class="close-box" data-target="{{ ctitle | prepend: '#company-' }}">{% include elements/symbol.svg id="x" %}</button>
-  <dl class="company-inner">
-    <dt>{{ site.data.companies[ctitle].title }}</dt>
-    <dd>{{ site.data.companies[ctitle].description | markdownify }}</dd>
-  </dl>
-</div>
-{% endfor %}
