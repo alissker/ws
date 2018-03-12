@@ -311,16 +311,35 @@ body {
 // Contact Block
 .address-block {
   @extend %clearfix;
+  display: table;
 
   address {
-    float: left;
+    display: table-cell;
     width: 50%;
-    text-align: center;
-    margin-bottom: $spacing-unit;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: $spacing-unit;
+    margin-bottom: 0;
 
     @include on-palm {
-      float: none;
+      display: block;
       width: 100%;
+      text-align: center;
+      margin-bottom: $spacing-unit;
+      padding-right: 0;
+    }
+  }
+
+  iframe {
+
+    display: table-cell;
+    height: 20rem;
+    width: 40rem;
+    border: 0;
+
+    @include on-palm {
+      width: 100%;
+      float: none;
     }
   }
 }
