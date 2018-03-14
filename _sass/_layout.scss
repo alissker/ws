@@ -177,7 +177,10 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    min-height: 70vh;
+
+    @include on-laptop {
+      min-height: 70vh;
+    }
 
     @include on-palm {
       &:first-child {
