@@ -39,6 +39,7 @@ $('.gallery-link').click ->
     $(target).slideToggle()
     $(target).addClass 'active-gallery'
     $(target).slick
+      lazyLoad: 'ondemand'
       dots: false
       infinite: true
       speed: 300
@@ -55,5 +56,5 @@ $('.tour-link').click ->
     hide_projects()
     $(target).slideToggle()
     $(target).addClass 'active-tour'
-    resizeVideos()
+    #resizeVideos()
   return

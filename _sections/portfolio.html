@@ -16,7 +16,7 @@ menu: true
   <figure id="{{ project.slug | prepend: 'gallery-' }}" class="project-gallery wrapper">
     {% assign gallery = project.gallery %}
     {% for image in (1..gallery) %}
-    <img class="lazyload" src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
+    <img src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
     {% endfor %}
   </figure>
 {% endfor %}
