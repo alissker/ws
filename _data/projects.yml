@@ -1,21 +1,25 @@
 - name: "Floating Concept / RV"
+  slug: "floating-concept-rv"
   locale: Balneário Camboriú
   gallery: 20
   cover: 1
   tour: "https://my.matterport.com/show/?m=WmrC2PSC4ha"
 
 - name: "Amores da Brava"
+  slug: "amores-da-brava"
   locale: Praia Brava
   gallery: 13
   cover: 9
 
 - name: "Edifício Apogee / Cecchinel"
+  slug: "edificio-apogee-cecchinel"
   locale: Balneário Camboriú
   architect: Antônio Lubanco
   gallery: 17
   cover: 5
 
 - name: "Condomínio Residencial Reserva Camboriú"
+  slug: "condominio-residencial-reserva-camboriu"
   locale: Balneário Camboriú
   gallery: 60
   cover: 21
@@ -26,16 +30,19 @@
 #  cover:
 
 - name: "Citta di Vinci Residenze"
+  slug: "citta-di-vinci-residenze"
   locale: Balneário Camboriú
   gallery: 29
   cover: 12
 
 - name: "Imobiliária"
+  slug: "imobiliaria"
   locale: Itapema
   gallery: 12
   cover: 5
 
 - name: "Residencial Dom Virgílio"
+  slug: "residencial-dom-virgilio"
   locale: Praia dos Ingleses
   gallery: 7
   cover: 1
