@@ -5,22 +5,37 @@ menu: true
 ---
 
 {% for project in site.data.projects %}
-{% assign projname = project[0] %}
-<dl id="{{ projname }}" class="project wrapper">
-  <dt>{{ site.data.projects[projname].city }} / {{ site.data.projects[projname].region | upcase }}
-  </dt>
-  <dd>{% if site.data.projects[projname].tour %}<a class="tour-link" data-target="{{ projname | prepend: '#tour-' }}">Tour virtual</a> / {% endif %} <a class="gallery-link" data-target="{{ projname | prepend: '#gallery-' }}">Galeria de imagens</a>
-</dl>
+  {% assign image_path = project.name | slugify: 'latin' | prepend: '/assets/images/projects/' | append: '/' %}
 
-{% if site.data.projects[projname].tour %}
-  <figure id="{{ projname | prepend: 'tour-' }}" class="project-tour active-tour">
-    <iframe src="{{ site.data.projects[projname].tour }}" frameborder="0" allowfullscreen></iframe>
+  {% if project.tour %}
+  <figure id="{{ project.name | slugify: 'latin' | prepend: 'tour-' }}" class="project-tour {% if forloop.first %}active-tour{% endif %}">
+    <iframe src="{{ project.tour }}" frameborder="0" allowfullscreen></iframe>
   </figure>
-{% endif %}
-<figure id="{{ projname | prepend: 'gallery-' }}" class="project-gallery wrapper">
-  {% assign gallery = site.data.projects[projname].gallery %}
-  {% for image in (1..gallery) %}
-  <img src="{{ projname | prepend: '/assets/images/projects/' | append: '/' | relative_url }}{{ image | append: '.jpg' }}" alt="" />
-  {% endfor %}
-</figure>
+  {% endif %}
+
+  <figure id="{{ project.name | slugify: 'latin' | prepend: 'gallery-' }}" class="project-gallery wrapper">
+    {% assign gallery = project.gallery %}
+    {% for image in (1..gallery) %}
+    <img src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
+    {% endfor %}
+  </figure>
 {% endfor %}
+
+<ul class="projects wrapper">
+  {% for project in site.data.projects %}
+    {% assign image_path = project.name | slugify: 'latin' | prepend: '/assets/images/projects/' | append: '/' %}
+    <li>
+      <figure>
+        <a class="gallery-link" data-target="{{ project.name | slugify: 'latin' | prepend: '#gallery-' }}">
+          <img src="{{ project.cover | prepend: image_path | append: '.jpg' }}" alt="{{ project.name }}" />
+        </a>
+
+        <figcaption class="project-info">
+          <strong>{{ project.name }}</strong>
+          {% if project.locale %}<br />{{ project.locale }}{% endif %}
+          {% if project.tour %}<br /><a class="tour-link" data-target="{{ project.name | slugify: 'latin' | prepend: '#tour-' }}">Veja o tour virtual</a>{% endif %}
+        </fig>
+      </figure>
+    </li>
+  {% endfor %}
+</ul>

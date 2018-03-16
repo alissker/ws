@@ -1,12 +1,41 @@
----
-camboriu:
-  city: Balneário Camboriú
-  region: sc
+- name: "Floating Concept / RV"
+  locale: Balneário Camboriú
   gallery: 20
-  tour: https://my.matterport.com/show/?m=WmrC2PSC4ha
+  cover: 1
+  tour: "https://my.matterport.com/show/?m=WmrC2PSC4ha"
 
-itapema:
-  city: Itapema
-  region: sc
-  gallery: 11
----
+- name: "Amores da Brava"
+  locale: Praia Brava
+  gallery: 13
+  cover: 9
+
+- name: "Edifício Apogee / Cecchinel"
+  locale: Balneário Camboriú
+  architect: Antônio Lubanco
+  gallery: 17
+  cover: 5
+
+- name: "Condomínio Residencial Reserva Camboriú"
+  locale: Balneário Camboriú
+  gallery: 60
+  cover: 21
+
+# - name: ""
+#  architect: Daniel Orpla
+#  gallery: 27
+#  cover:
+
+- name: "Citta di Vinci Residenze"
+  locale: Balneário Camboriú
+  gallery: 29
+  cover: 12
+
+- name: "Imobiliária"
+  locale: Itapema
+  gallery: 12
+  cover: 5
+
+- name: "Residencial Dom Virgílio"
+  locale: Praia dos Ingleses
+  gallery: 7
+  cover: 1
