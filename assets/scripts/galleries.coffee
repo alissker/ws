@@ -1,5 +1,6 @@
 ---
 ---
+
 $('.company-link').click ->
   target = $(this).attr('data-target')
   if $(target).hasClass('active-company')

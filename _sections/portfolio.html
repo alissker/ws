@@ -16,7 +16,7 @@ menu: true
   <figure id="{{ project.slug | prepend: 'gallery-' }}" class="project-gallery wrapper">
     {% assign gallery = project.gallery %}
     {% for image in (1..gallery) %}
-    <img src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
+    <img class="lazyload" src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
     {% endfor %}
   </figure>
 {% endfor %}
@@ -31,7 +31,7 @@ menu: true
         </a>
 
         <figcaption class="project-info">
-          <strong>{{ project.slug }}</strong>
+          <strong>{{ project.name }}</strong>
           {% if project.locale %}<br />{{ project.locale }}{% endif %}
           {% if project.tour %}<br /><a class="tour-link" data-target="{{ project.slug | slugify: 'latin' | prepend: '#tour-' }}">Veja o tour virtual</a>{% endif %}
         </fig>
