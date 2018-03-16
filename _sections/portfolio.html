@@ -5,15 +5,15 @@ menu: true
 ---
 
 {% for project in site.data.projects %}
-  {% assign image_path = project.name | slugify: 'latin' | prepend: '/assets/images/projects/' | append: '/' %}
+  {% assign image_path = project.name | slugify: 'ascii' | prepend: '/assets/images/projects/' | append: '/' %}
 
   {% if project.tour %}
-  <figure id="{{ project.name | slugify: 'latin' | prepend: 'tour-' }}" class="project-tour {% if forloop.first %}active-tour{% endif %}">
+  <figure id="{{ project.name | slugify: 'ascii' | prepend: 'tour-' }}" class="project-tour {% if forloop.first %}active-tour{% endif %}">
     <iframe src="{{ project.tour }}" frameborder="0" allowfullscreen></iframe>
   </figure>
   {% endif %}
 
-  <figure id="{{ project.name | slugify: 'latin' | prepend: 'gallery-' }}" class="project-gallery wrapper">
+  <figure id="{{ project.name | slugify: 'ascii' | prepend: 'gallery-' }}" class="project-gallery wrapper">
     {% assign gallery = project.gallery %}
     {% for image in (1..gallery) %}
     <img src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
@@ -23,17 +23,17 @@ menu: true
 
 <ul class="projects wrapper">
   {% for project in site.data.projects %}
-    {% assign image_path = project.name | slugify: 'latin' | prepend: '/assets/images/projects/' | append: '/' %}
+    {% assign image_path = project.name | slugify: 'ascii' | prepend: '/assets/images/projects/' | append: '/' %}
     <li>
       <figure>
-        <a class="gallery-link" data-target="{{ project.name | slugify: 'latin' | prepend: '#gallery-' }}">
+        <a class="gallery-link" data-target="{{ project.name | slugify: 'ascii' | prepend: '#gallery-' }}">
           <img src="{{ project.cover | prepend: image_path | append: '.jpg' }}" alt="{{ project.name }}" />
         </a>
 
         <figcaption class="project-info">
           <strong>{{ project.name }}</strong>
           {% if project.locale %}<br />{{ project.locale }}{% endif %}
-          {% if project.tour %}<br /><a class="tour-link" data-target="{{ project.name | slugify: 'latin' | prepend: '#tour-' }}">Veja o tour virtual</a>{% endif %}
+          {% if project.tour %}<br /><a class="tour-link" data-target="{{ project.name | slugify: 'ascii' | prepend: '#tour-' }}">Veja o tour virtual</a>{% endif %}
         </fig>
       </figure>
     </li>
