@@ -23,10 +23,10 @@ menu: true
 
 <ul class="projects wrapper">
   {% for project in site.data.projects %}
-    {% assign image_path = project.name | slugify: 'latin' | prepend: '/assets/images/projects/' | append: '/' %}
+    {% assign image_path = project.name | slugify | slugify: 'latin' | prepend: '/assets/images/projects/' | append: '/' %}
     <li>
       <figure>
-        <a class="gallery-link" data-target="{{ project.name | slugify: 'latin' | prepend: '#gallery-' }}">
+        <a class="gallery-link" data-target="{{ project.name | slugify | slugify: 'latin' | prepend: '#gallery-' }}">
           <img src="{{ project.cover | prepend: image_path | append: '.jpg' }}" alt="{{ project.name }}" />
         </a>
 
