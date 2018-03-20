@@ -16,6 +16,15 @@ collections:
   svg:
     output: false
 
+# SEO settings
+logo: "/assets/images/logo.png"
+lang: "pt_BR"
+social:
+  name: WS Group
+  links:
+    - https://www.facebook.com/groupws
+    - https://www.instagram.com/group_ws
+
 # Build settings
 markdown: kramdown
 baseurl: ""
@@ -30,6 +39,7 @@ defaults:
 
 plugins:
   - jekyll-coffeescript
+  - jekyll-seo-tag
 exclude:
   - README.md
   - Gemfile
