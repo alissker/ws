@@ -211,7 +211,7 @@ body {
       display: inline-block;
 
       img {
-        width: 12rem;
+        width: 15rem;
       }
     }
   }
@@ -373,6 +373,44 @@ body {
   text-align: center;
 }
 
+#contato .company-links {
+  text-align: center;
+  margin-top: $spacing-unit * 2;
+
+  li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: $spacing-unit * 2;
+    }
+  }
+
+  img {
+    height: 5rem;
+    width: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .berlim-ambientes,
+  .ilumion {
+    img {
+      height: 4rem;
+    }
+  }
+
+  .mwa {
+    img {
+      height: 6rem;
+    }
+  }
+}
+
 /*
     Site Footer
 */
@@ -382,9 +420,15 @@ body {
   text-align: center;
   padding-top: $spacing-unit;
   padding-bottom: $spacing-unit;
+  font-size: $font-size-small;
 
-  svg {
-    height: calc(#{$font-line-height} * #{$font-size-base});
-    width: 5.2rem;
+  a {
+    font-weight: 700;
+    color: $color-background;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
   }
 }

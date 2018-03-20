@@ -1,26 +1,13 @@
 ---
-mwa:
-  title: Martin Wayhs Arquitetura
-  description: >-
-    Desenvolvemos projetos arquitetônicos e projeto de interiores.
-
-invest:
-  title: WS Invest
-  description: >-
-    A _WS Invest_ é a empresa que auxilia na consultoria da compra de imóveis.
-
-design:
-  title: WS Design
-  description: >-
-    Temos a nossa própria marca de móveis sob medida. Desenvolvemos um projeto exclusivo para você.
-
-berlim:
-  title: Berlim Ambientes
-  description: >-
-    Os produtos Berlim são renomados pela qualidade, flexibilidade e versatilidade. Permitem criações personalizadas com total aproveitamento de espaço.
-
-ilumion:
-  title: Ilumion
-  description: >-
-    Transformamos os ambientes internos e externos com os efeitos que só a iluminação proporciona. Além do projeto luminotécnico, oferecemos os produtos, e também desenvolvemos luminárias personalizadas.
+- name: Berlim Ambientes
+  url: "http://www.berlimambientes.com.br"
+  logo:  "/assets/images/companies/footer/berlim.png"
+- name: WS Invest
+  logo:  "/assets/images/companies/footer/invest.png"
+- name: MWA
+  logo:  "/assets/images/companies/footer/mwa.png"
+- name: WS Design
+  logo:  "/assets/images/companies/footer/design.png"
+- name: Ilumion
+  logo:  "/assets/images/companies/footer/ilumion.png"
 ---

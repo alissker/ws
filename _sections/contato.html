@@ -21,3 +21,17 @@ menu: true
     <a href="mailto:financeiro@groupws.com.br">financeiro@groupws.com.br</a>
   </li>
 </ul>
+
+<ul class="company-links">
+  {% for company in site.data.companies %}
+  <li class="{{ company.name | slugify: 'latin' }}">
+    {% if company.url %}
+    <a href="{{ company.url }}" rel="external">
+      <img src="{{ company.logo }}" alt="{{ company.name }}" />
+    </a>
+    {% else %}
+    <img src="{{ company.logo }}" alt="{{ company.name }}" />
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
