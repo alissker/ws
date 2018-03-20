@@ -4,29 +4,12 @@ order: 3
 menu: true
 ---
 
-{% for project in site.data.projects %}
-  {% assign image_path = project.slug | prepend: '/assets/images/projects/' | append: '/' %}
-
-  {% if project.tour %}
-  <figure id="{{ project.slug | prepend: 'tour-' }}" class="project-tour {% if forloop.first %}active-tour{% endif %}">
-    <iframe src="{{ project.tour }}" frameborder="0" allowfullscreen></iframe>
-  </figure>
-  {% endif %}
-
-  <figure id="{{ project.slug | prepend: 'gallery-' }}" class="project-gallery wrapper">
-    {% assign gallery = project.gallery %}
-    {% for image in (1..gallery) %}
-    <img src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
-    {% endfor %}
-  </figure>
-{% endfor %}
-
 <ul class="projects wrapper">
   {% for project in site.data.projects %}
     {% assign image_path = project.slug  | prepend: '/assets/images/projects/' | append: '/' %}
     <li>
       <figure>
-        <a class="gallery-link" data-target="{{ project.slug | prepend: '#gallery-' }}">
+        <a class="gallery-link" data-target="{{ project.slug | prepend: '#gallery-' }}" href="#projects-container">
           <img src="{{ project.cover | prepend: image_path | append: '.jpg' }}" alt="{{ project.slug }}" />
         </a>
 
@@ -39,3 +22,22 @@ menu: true
     </li>
   {% endfor %}
 </ul>
+
+<div id="projects-container">
+  {% for project in site.data.projects %}
+    {% assign image_path = project.slug | prepend: '/assets/images/projects/' | append: '/' %}
+
+    {% if project.tour %}
+    <figure id="{{ project.slug | prepend: 'tour-' }}" class="project-tour {% if forloop.first %}active-tour{% endif %}">
+      <iframe src="{{ project.tour }}" frameborder="0" allowfullscreen></iframe>
+    </figure>
+    {% endif %}
+
+    <figure id="{{ project.slug | prepend: 'gallery-' }}" class="project-gallery wrapper">
+      {% assign gallery = project.gallery %}
+      {% for image in (1..gallery) %}
+      <img src="{{ image | prepend: image_path | append: '.jpg' }}" alt="" />
+      {% endfor %}
+    </figure>
+  {% endfor %}
+</div>

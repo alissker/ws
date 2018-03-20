@@ -22,7 +22,7 @@
       {% assign sections = site.sections | sort: 'order' %}
       {% for section in sections %}
         {% if section.menu %}
-          <a onclick="document.querySelector('{{ section.slug | prepend: '#' }}').scrollIntoView({ behavior: 'smooth' });" href="javascript:void(0)">{{ section.menu.label | default: section.title }}</a>
+          <a class="section-link" href="{{ section.slug | prepend: '#' }}">{{ section.menu.label | default: section.title }}</a>
         {% endif %}
       {% endfor %}
     </div>
