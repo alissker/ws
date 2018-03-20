@@ -173,7 +173,6 @@ body {
 
   .page-section {
     padding-top: 10.5rem + $spacing-unit;
-    padding-bottom: $spacing-unit;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -376,6 +375,19 @@ body {
 #contato .company-links {
   text-align: center;
   margin-top: $spacing-unit * 2;
+
+  @include on-palm {
+    display: flex;
+    flex-flow: row nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    margin-left: -($spacing-unit / 2);
+    margin-right: -($spacing-unit / 2);
+
+    li {
+      flex: 0 0 auto;
+    }
+  }
 
   li {
     display: inline-block;
