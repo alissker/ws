@@ -376,9 +376,45 @@ body {
   text-align: center;
   margin-top: $spacing-unit * 2;
 
+  li {
+    display: inline-block;
+
+    @include on-laptop {
+      &:not(:last-child) {
+        margin-right: $spacing-unit * 2;
+      }
+    }
+
+    img {
+      height: 5rem;
+      width: auto;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    &.berlim-ambientes,
+    &.ilumion {
+      img {
+        height: 4rem;
+      }
+    }
+
+    &.mwa {
+      img {
+        height: 6rem;
+      }
+    }
+  }
+
   @include on-palm {
     display: flex;
     flex-flow: row nowrap;
+    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     margin-left: -($spacing-unit / 2);
@@ -386,39 +422,7 @@ body {
 
     li {
       flex: 0 0 auto;
-    }
-  }
-
-  li {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: $spacing-unit * 2;
-    }
-  }
-
-  img {
-    height: 5rem;
-    width: auto;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-
-    &:hover,
-    &:focus {
-      opacity: 1;
-    }
-  }
-
-  .berlim-ambientes,
-  .ilumion {
-    img {
-      height: 4rem;
-    }
-  }
-
-  .mwa {
-    img {
-      height: 6rem;
+      padding-right: $spacing-unit;
     }
   }
 }
