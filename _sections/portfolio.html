@@ -16,7 +16,7 @@ menu: true
         <figcaption class="project-info">
           <strong>{{ project.name }}</strong>
           {% if project.locale %}<br />{{ project.locale }}{% endif %}
-          {% if project.tour %}<br /><a class="tour-link" data-target="{{ project.slug | slugify: 'latin' | prepend: '#tour-' }}">Veja o tour virtual</a>{% endif %}
+          {% if project.tour %}<br /><a class="tour-link" data-target="{{ project.slug | slugify: 'latin' | prepend: '#tour-' }}" href="#projects-container">Veja o tour virtual</a>{% endif %}
         </fig>
       </figure>
     </li>
