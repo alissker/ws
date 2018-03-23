@@ -1,3 +1,9 @@
+- name: "Iluminatti / RV"
+  slug: "iluminatti-rv"
+  locale: Balneário Camboriú
+  gallery: 68
+  cover: 44
+
 - name: "Floating Concept / RV"
   slug: "floating-concept-rv"
   locale: Balneário Camboriú

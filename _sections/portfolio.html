@@ -28,7 +28,7 @@ menu: true
     {% assign image_path = project.slug | prepend: '/assets/images/projects/' | append: '/' %}
 
     {% if project.tour %}
-    <figure id="{{ project.slug | prepend: 'tour-' }}" class="project-tour {% if forloop.first %}active-tour{% endif %}">
+    <figure id="{{ project.slug | prepend: 'tour-' }}" class="project-tour">
       <iframe src="{{ project.tour }}" frameborder="0" allowfullscreen></iframe>
     </figure>
     {% endif %}

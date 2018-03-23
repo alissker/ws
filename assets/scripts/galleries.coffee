@@ -30,6 +30,7 @@ hide_projects = ->
   return
 
 $('.project-gallery').hide()
+$('.project-tour').hide()
 $('.gallery-link').click ->
   target = $(this).attr('data-target')
   if $(target).hasClass('active-gallery')
